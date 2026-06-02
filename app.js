@@ -337,10 +337,43 @@ const itinerary = [
 
 const weekdayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const weekdayZh = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
+const journeyGroups = [
+  {
+    id: "bay",
+    title: "海湾序章之旅",
+    dateRange: "2026-06-11 至 2026-06-17",
+    summary: "旧金山湾区、恶魔岛、金门桥、Napa、斯坦福毕业典礼、Half Moon Bay、蒙特雷和 Livermore。",
+    dates: ["2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17"]
+  },
+  {
+    id: "yellowstone",
+    title: "山野黄石之旅",
+    dateRange: "2026-06-18 至 2026-06-22",
+    summary: "从旧金山飞往博兹曼，进入黄石北门、Mammoth、Grand Prismatic、Old Faithful 和黄石大峡谷。",
+    dates: ["2026-06-18", "2026-06-19", "2026-06-20", "2026-06-21", "2026-06-22"]
+  },
+  {
+    id: "vegas",
+    title: "霓虹假日之旅",
+    dateRange: "2026-06-23 至 2026-06-26",
+    summary: "博兹曼飞抵拉斯维加斯，入住 Encore，集中安排中南 Strip、Boulder City、Chinatown、Wynn、Sphere 和 show。",
+    dates: ["2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26"]
+  },
+  {
+    id: "return",
+    title: "返程缓冲之旅",
+    dateRange: "2026-06-27 至 2026-06-29",
+    summary: "从拉斯维加斯返回旧金山，保留返程前缓冲、购物整理和返京航班确认时间。",
+    dates: ["2026-06-27", "2026-06-28", "2026-06-29"]
+  }
+];
 
 const list = document.querySelector("#itineraryList");
 const expandAllButton = document.querySelector("#expandAll");
 const collapseAllButton = document.querySelector("#collapseAll");
+const journeyTabs = document.querySelector("#journeyTabs");
+const journeySummary = document.querySelector("#journeySummary");
+const journeyPanels = document.querySelector("#journeyPanels");
 const weatherApiUrl = "https://api.open-meteo.com/v1/forecast";
 const weatherCodeLabels = {
   0: "晴",
@@ -576,8 +609,21 @@ function createDayCard(item, index) {
   return article;
 }
 
+function getItemsForJourney(group) {
+  const dateSet = new Set(group.dates);
+  return itinerary.filter((item) => dateSet.has(item.date));
+}
+
+function getActiveCardScope() {
+  if (!journeyPanels) {
+    return document;
+  }
+
+  return journeyPanels.querySelector(".journey-panel:not([hidden])") || journeyPanels;
+}
+
 function setAllCards(open) {
-  document.querySelectorAll(".day-card").forEach((card) => {
+  getActiveCardScope().querySelectorAll(".day-card").forEach((card) => {
     const toggle = card.querySelector(".day-card__toggle");
     const details = card.querySelector(".day-card__details");
     const action = card.querySelector(".day-card__action");
@@ -587,11 +633,113 @@ function setAllCards(open) {
   });
 }
 
-itinerary.forEach((item, index) => {
-  list.appendChild(createDayCard(item, index));
-});
+function setActiveJourney(groupId) {
+  if (!journeyTabs || !journeyPanels) {
+    return;
+  }
+
+  const activeGroup = journeyGroups.find((group) => group.id === groupId) || journeyGroups[0];
+
+  journeyTabs.querySelectorAll("[role='tab']").forEach((tab) => {
+    const isActive = tab.dataset.journeyId === activeGroup.id;
+    tab.setAttribute("aria-selected", String(isActive));
+    tab.tabIndex = isActive ? 0 : -1;
+  });
+
+  journeyPanels.querySelectorAll(".journey-panel").forEach((panel) => {
+    const isActive = panel.dataset.journeyId === activeGroup.id;
+    panel.hidden = !isActive;
+
+    if (isActive) {
+      panel.setAttribute("aria-labelledby", `journey-tab-${activeGroup.id}`);
+    }
+  });
+
+  if (journeySummary) {
+    journeySummary.textContent = activeGroup.summary;
+  }
+}
+
+function renderJourneyTabs() {
+  journeyGroups.forEach((group, index) => {
+    const tab = document.createElement("button");
+    tab.className = "journey-tab";
+    tab.type = "button";
+    tab.id = `journey-tab-${group.id}`;
+    tab.dataset.journeyId = group.id;
+    tab.setAttribute("role", "tab");
+    tab.setAttribute("aria-selected", String(index === 0));
+    tab.setAttribute("aria-controls", `journey-panel-${group.id}`);
+    tab.tabIndex = index === 0 ? 0 : -1;
+    tab.innerHTML = `
+      <span class="journey-tab__title">${group.title}</span>
+      <span class="journey-tab__meta">${group.dateRange}</span>
+    `;
+
+    tab.addEventListener("click", () => setActiveJourney(group.id));
+    tab.addEventListener("keydown", (event) => {
+      if (!["ArrowLeft", "ArrowRight"].includes(event.key)) {
+        return;
+      }
+
+      const tabs = [...journeyTabs.querySelectorAll("[role='tab']")];
+      const currentIndex = tabs.indexOf(tab);
+      const direction = event.key === "ArrowRight" ? 1 : -1;
+      const nextIndex = (currentIndex + direction + tabs.length) % tabs.length;
+      tabs[nextIndex].focus();
+      setActiveJourney(tabs[nextIndex].dataset.journeyId);
+      event.preventDefault();
+    });
+
+    journeyTabs.appendChild(tab);
+  });
+}
+
+function renderJourneyPanels() {
+  journeyGroups.forEach((group) => {
+    const panel = document.createElement("div");
+    panel.className = "journey-panel";
+    panel.id = `journey-panel-${group.id}`;
+    panel.dataset.journeyId = group.id;
+    panel.setAttribute("role", "tabpanel");
+
+    const grid = document.createElement("div");
+    grid.className = "day-grid";
+    getItemsForJourney(group).forEach((item) => {
+      grid.appendChild(createDayCard(item, itinerary.indexOf(item)));
+    });
+
+    panel.appendChild(grid);
+    journeyPanels.appendChild(panel);
+  });
+
+  setActiveJourney(journeyGroups[0].id);
+}
+
+function renderItinerary() {
+  if (journeyTabs && journeyPanels) {
+    renderJourneyTabs();
+    renderJourneyPanels();
+    return;
+  }
+
+  if (!list) {
+    return;
+  }
+
+  itinerary.forEach((item, index) => {
+    list.appendChild(createDayCard(item, index));
+  });
+}
+
+renderItinerary();
 
 loadWeatherForecasts();
 
-expandAllButton.addEventListener("click", () => setAllCards(true));
-collapseAllButton.addEventListener("click", () => setAllCards(false));
+if (expandAllButton) {
+  expandAllButton.addEventListener("click", () => setAllCards(true));
+}
+
+if (collapseAllButton) {
+  collapseAllButton.addEventListener("click", () => setAllCards(false));
+}

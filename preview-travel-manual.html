@@ -7,12 +7,16 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body class="theme-manual">
-    <header class="hero">
-      <img src="assets/san-francisco.png" alt="旧金山金门大桥旅行封面" class="hero__image">
+    <header class="hero hero--cinematic">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/golden-gate-fog-hero.png" alt="" class="hero__image hero__image--cinematic">
+        <span class="hero__fog hero__fog--far"></span>
+        <span class="hero__fog hero__fog--near"></span>
+      </div>
       <div class="hero__shade"></div>
       <div class="hero__content">
         <nav class="preview-switcher" aria-label="风格预览切换">
-          <a href="index.html">当前正式版</a>
+          <a href="index.html">正式首页</a>
           <a href="preview-travel-manual.html" aria-current="page">旅行手册风</a>
           <a href="preview-concierge.html">礼宾风</a>
         </nav>
@@ -241,12 +245,17 @@
           </div>
         </div>
 
-        <div class="day-grid" id="itineraryList"></div>
+        <div class="journey-tabs" aria-label="旅程分段">
+          <div class="journey-tabs__list" id="journeyTabs" role="tablist"></div>
+          <p class="journey-tabs__summary" id="journeySummary"></p>
+        </div>
+
+        <div class="journey-panels" id="journeyPanels"></div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>旅行手册风预览。确认视觉方向后，可替换为正式首页。</p>
+      <p>旅行手册风预览。正式首页已同步此视觉方向，礼宾风仍可作为对照。</p>
     </footer>
 
     <script src="app.js"></script>

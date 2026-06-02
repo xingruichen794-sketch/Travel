@@ -3,18 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>美国西部家庭旅行行程</title>
+    <title>美国西部家庭旅行手册</title>
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
-    <header class="hero">
-      <img src="assets/san-francisco.png" alt="旧金山金门大桥旅行封面" class="hero__image">
+  <body class="theme-manual">
+    <header class="hero hero--cinematic">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/golden-gate-fog-hero.png" alt="" class="hero__image hero__image--cinematic">
+        <span class="hero__fog hero__fog--far"></span>
+        <span class="hero__fog hero__fog--near"></span>
+      </div>
       <div class="hero__shade"></div>
       <div class="hero__content">
         <p class="eyebrow">2026.06.11 - 2026.06.29</p>
-        <h1>美国西部家庭旅行行程</h1>
+        <h1>美国西部家庭旅行手册</h1>
         <p class="hero__lead">
-          旧金山、斯坦福毕业典礼、黄石公园、博兹曼和拉斯维加斯行程手册。当前版本用于给家人预览整体安排，航班、住宿和待确认事项会持续更新。
+          旧金山、斯坦福毕业典礼、黄石公园、博兹曼和拉斯维加斯的 19 天家庭旅行。页面按目的地和日期整理，方便出发前一起确认节奏。
         </p>
       </div>
     </header>
@@ -23,21 +27,22 @@
       <section class="overview" aria-labelledby="overview-title">
         <div class="section-heading">
           <p class="eyebrow">旅行概览</p>
-          <h2 id="overview-title">先看整体路线和待确认事项</h2>
+          <h2 id="overview-title">一份清晰的西部家庭行程手册</h2>
+          <p class="section-heading__lead">首页只展示家人最需要先看的路线、亮点和预约状态；航班、签证、预约编号等内部信息收进折叠备注，避免页面看起来像备忘录。</p>
         </div>
 
         <div class="stats-grid" aria-label="旅行关键数字">
-          <div class="stat">
-            <span class="stat__value">5</span>
-            <span class="stat__label">家庭成员</span>
-          </div>
           <div class="stat">
             <span class="stat__value">19</span>
             <span class="stat__label">行程天数</span>
           </div>
           <div class="stat">
+            <span class="stat__value">5</span>
+            <span class="stat__label">同行人数</span>
+          </div>
+          <div class="stat">
             <span class="stat__value">3</span>
-            <span class="stat__label">主要目的地</span>
+            <span class="stat__label">核心目的地</span>
           </div>
           <div class="stat">
             <span class="stat__value">SFO</span>
@@ -45,7 +50,7 @@
           </div>
         </div>
 
-        <div class="overview-grid">
+        <div class="overview-grid overview-grid--editorial">
           <article class="panel">
             <h3>城市路线</h3>
             <ol class="route-list">
@@ -58,46 +63,75 @@
           </article>
 
           <article class="panel">
-            <h3>交通假设</h3>
+            <h3>旅程亮点</h3>
             <ul class="clean-list">
-              <li>6/11 至 6/18 旧金山段租 Toyota Sienna，覆盖接机、市区、Napa、Half Moon Bay、蒙特雷和 Livermore Outlets。</li>
-              <li>女朋友妈妈 MU589：6/11 12:30 从上海浦东出发，6/11 9:05 抵达旧金山。</li>
-              <li>6/18 AS2062：13:56 旧金山飞博兹曼，17:11 到达。</li>
-              <li>6/23 WN1137：19:10 博兹曼飞拉斯维加斯，20:20 到达。</li>
-              <li>黄石段同样租 Toyota Sienna 自驾，BZN 取还车时间和租车公司待确认。</li>
-              <li>拉斯维加斯市内以打车为主。</li>
-            </ul>
-          </article>
-
-          <article class="panel">
-            <h3>家庭成员与航班状态</h3>
-            <ul class="clean-list">
-              <li>我和女朋友已在旧金山。</li>
-              <li>爸妈去程机票未定，签证时间为 2026 年 6 月 3 日。</li>
-              <li>女朋友妈妈去程航班已知：MU589 上海浦东至旧金山。</li>
-              <li>6/18 旧金山至博兹曼为 5 人同行。</li>
+              <li>旧金山湾区：恶魔岛、金门桥、Napa、Half Moon Bay 和蒙特雷观鲸。</li>
+              <li>6/14 全天参加 Stanford 毕业典礼。</li>
+              <li>黄石段按北门、间歇泉、Old Faithful、黄石大峡谷顺序展开。</li>
+              <li>拉斯维加斯集中安排购物、show、Wynn / Encore 和北 Strip。</li>
             </ul>
           </article>
 
           <article class="panel panel--notice">
-            <h3>重要待确认</h3>
+            <h3>已确认安排</h3>
             <ul class="clean-list">
-              <li>6/29 返回北京机票未买。</li>
-              <li>6/11 至 6/18 早上旧金山住宿：Airbnb 民宿，36 Henderson Place。</li>
-              <li>湾区段午饭和晚饭已固定到具体餐厅；家庭晚饭仅 6/15 一顿，在 Airbnb 自己做饭。</li>
-              <li>6/12 恶魔岛 Alcatraz 已预约：10:35；下午去金门桥看景。</li>
-              <li>6/12 Sushi Ai 已预约：17:30，Redwood City。</li>
-              <li>6/13 Cyrus 已加入行程，具体预约时间待补。</li>
-              <li>6/16 Monterey 观鲸已预订：09:00 四小时，Booking reference BR-1405224561。</li>
-              <li>6/17 San Ho Won 已预约：21:00，Reservation #EP73R444PKC，Party of 5。</li>
-              <li>6/23 晚上至 6/27 早上拉斯维加斯住宿：Encore at Wynn Las Vegas / 安可酒店。</li>
-              <li>拉斯维加斯段待预约：Peter Luger、O Show、Pro Gun Vegas、Raku、Wynn Buffet priority seating、Sphere、Mott 32、Awakening。</li>
-              <li>每日卡片天气为联网预报，使用摄氏度；远期日期会在接近出发时自动更新。</li>
-              <li>6/15 只去 Half Moon Bay，看海和骑马；骑马预约信息待确认。</li>
-              <li>爸妈去程航班、黄石段租车和黄石住宿待确认。</li>
-              <li>黄石段已按 Notion 行程填入；住宿、租车细节和部分餐厅预约仍需确认。</li>
+              <li>6/11 至 6/18 早上旧金山住宿：36 Henderson Place Airbnb。</li>
+              <li>6/12 Alcatraz 10:35；Sushi Ai 17:30。</li>
+              <li>6/16 Monterey 观鲸 09:00，四小时。</li>
+              <li>6/17 San Ho Won 21:00，5 人。</li>
+              <li>6/23 晚上至 6/27 早上入住 Encore at Wynn Las Vegas / 安可酒店。</li>
             </ul>
           </article>
+
+          <article class="panel">
+            <h3>待预约事项</h3>
+            <ul class="clean-list">
+              <li>6/29 返回北京机票未买。</li>
+              <li>6/13 Cyrus 已加入行程，具体预约时间待补。</li>
+              <li>6/15 只去 Half Moon Bay，看海和骑马；骑马预约信息待确认。</li>
+              <li>拉斯维加斯段：Peter Luger、O Show、Pro Gun Vegas、Raku、Wynn Buffet、Sphere、Mott 32、Awakening。</li>
+              <li>爸妈去程航班、黄石住宿、黄石租车公司和 BZN 取还车细节待确认。</li>
+            </ul>
+          </article>
+
+          <details class="panel internal-notes">
+            <summary>内部备注</summary>
+            <div class="internal-note-grid">
+              <section>
+                <h4>交通与航班</h4>
+                <ul class="clean-list">
+                  <li>6/11 至 6/18 旧金山段租 Toyota Sienna，覆盖湾区行程。</li>
+                  <li>6/18 AS2062：13:56 旧金山飞博兹曼，17:11 到达，5 人同行。</li>
+                  <li>黄石段同样租 Toyota Sienna 自驾，BZN 取还车时间和租车公司待确认。</li>
+                  <li>6/23 WN1137：19:10 博兹曼飞拉斯维加斯，20:20 到达。</li>
+                  <li>拉斯维加斯市内以打车为主；6/27 飞回旧金山航班待确认。</li>
+                </ul>
+              </section>
+              <section>
+                <h4>家庭与证件</h4>
+                <ul class="clean-list">
+                  <li>我和女朋友已在旧金山。</li>
+                  <li>爸妈去程机票未定，签证时间为 2026 年 6 月 3 日。</li>
+                  <li>女朋友妈妈 MU589：6/11 12:30 从上海浦东出发，6/11 9:05 抵达旧金山。</li>
+                </ul>
+              </section>
+              <section>
+                <h4>预约编号</h4>
+                <ul class="clean-list">
+                  <li>6/16 Monterey 观鲸：Booking reference BR-1405224561。</li>
+                  <li>6/17 San Ho Won：Reservation #EP73R444PKC，Party of 5。</li>
+                </ul>
+              </section>
+              <section>
+                <h4>页面备注</h4>
+                <ul class="clean-list">
+                  <li>每日卡片天气为联网预报，使用摄氏度；远期日期会在接近出发时自动更新。</li>
+                  <li>湾区段午饭和晚饭已固定到具体餐厅；家庭晚饭仅 6/15 一顿，在 Airbnb 自己做饭。</li>
+                  <li>黄石段已按 Notion 行程填入；住宿、租车细节和部分餐厅预约仍需确认。</li>
+                </ul>
+              </section>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -206,12 +240,17 @@
           </div>
         </div>
 
-        <div class="day-grid" id="itineraryList"></div>
+        <div class="journey-tabs" aria-label="旅程分段">
+          <div class="journey-tabs__list" id="journeyTabs" role="tablist"></div>
+          <p class="journey-tabs__summary" id="journeySummary"></p>
+        </div>
+
+        <div class="journey-panels" id="journeyPanels"></div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>本行程为家庭内部预览模板。请在确认航班、酒店、租车和景点后更新每日详情。</p>
+      <p>美国西部家庭旅行手册。行程、预约和天气信息会随确认进度持续更新。</p>
     </footer>
 
     <script src="app.js"></script>
