@@ -25,7 +25,7 @@ const itinerary = [
     lodging: "旧金山 Airbnb 民宿：36 Henderson Place，住宿至 6/18 早上退房。",
     lunch: "The Kitchen 廚房製造（Millbrae）。",
     schedule: {
-      morning: "SFO 接机；女朋友妈妈抵达后完成入境、取行李，并领取 Toyota Sienna。爸妈去程航班待确认。",
+      morning: "SFO 接机；女朋友妈妈抵达后完成入境、取行李，并领取 Toyota Sienna。爸妈去程航班出发前同步。",
       afternoon: "前往 36 Henderson Place Airbnb，办理入住或寄存行李；采购饮用水、早餐和生活用品。",
       evening: "晚饭安排 Chong Qing Xiao Mian 重慶小面（San Francisco），之后回 Airbnb 休息倒时差。"
     },
@@ -63,7 +63,7 @@ const itinerary = [
       afternoon: "参观 Opus One Winery；如有余力，在 Yountville 或 St. Helena 短暂停留。",
       evening: "Napa 段结束后前往 Geyserville，晚饭安排 Cyrus（Geyserville），之后返回 Airbnb。"
     },
-    notes: "Opus One Winery 需提前确认预约时间；Cyrus 具体预约时间待补。当天不要安排过多酒庄，开车人需避开饮酒；晚饭后回旧金山路程较长，需预留体力和夜间驾驶时间。"
+    notes: "Opus One Winery 需提前确认预约时间；Cyrus 预约时间更新后同步。当天不要安排过多酒庄，开车人需避开饮酒；晚饭后回旧金山路程较长，需预留体力和夜间驾驶时间。"
   },
   {
     date: "2026-06-14",
@@ -141,7 +141,7 @@ const itinerary = [
     weatherLocation: weatherLocations.bozeman,
     summary: "退房还车后乘 AS2062 抵达博兹曼，领取黄石段 Toyota Sienna，补给后入住 Livingston 方向 Airbnb。",
     transport: "归还 6/11-6/18 旧金山段 Toyota Sienna。Alaska Airlines AS2062，5 人同行，13:56 从旧金山出发，17:11 到达博兹曼。抵达 BZN 后领取黄石段 Toyota Sienna。",
-    lodging: "Livingston / Yellowstone's Edge 方向 Airbnb 待确认。",
+    lodging: "Livingston / Yellowstone's Edge 方向 Airbnb，以最终预订为准。",
     lunch: "Bun Mee（SFO）。",
     schedule: {
       morning: "从 36 Henderson Place Airbnb 退房，整理行李，归还 Toyota Sienna 并前往 SFO。",
@@ -158,7 +158,7 @@ const itinerary = [
     weatherLocation: weatherLocations.mammothHotSprings,
     summary: "黄石北线轻松日：Roosevelt Arch、Mammoth Hot Springs 和 Tower Fall。",
     transport: "黄石段 Toyota Sienna 自驾，从 Livingston / Yellowstone's Edge 方向前往 Gardiner 北门，再游览 Mammoth 和 Tower Fall。",
-    lodging: "Livingston / Yellowstone's Edge 方向 Airbnb 待确认。",
+    lodging: "Livingston / Yellowstone's Edge 方向 Airbnb，以最终预订为准。",
     lunch: "Mammoth 午餐 / 休息。",
     schedule: {
       morning: "9:00 左右起床、早餐和整理；10:00 从住宿出发，经 US-89 前往 Gardiner / North Entrance，先在 Roosevelt Arch 拍照。",
@@ -175,7 +175,7 @@ const itinerary = [
     weatherLocation: weatherLocations.grandPrismatic,
     summary: "从北门进入黄石，游览 Norris、Grand Prismatic Overlook 和 Midway Geyser Basin。",
     transport: "黄石段 Toyota Sienna 自驾，从 Yellowstone's Edge 出发，经 Gardiner、Mammoth、Norris、Madison 前往 West Yellowstone / Island Park 方向。",
-    lodging: "West Yellowstone / Island Park 方向住宿待确认。",
+    lodging: "West Yellowstone / Island Park 方向住宿，以最终预订为准。",
     lunch: "Picnic 午餐 / 休息。",
     schedule: {
       morning: "起床、早餐并 check-out；从 Yellowstone's Edge 出发，经 Gardiner 短补给后前往 Norris Geyser Basin。",
@@ -192,7 +192,7 @@ const itinerary = [
     weatherLocation: weatherLocations.oldFaithful,
     summary: "西门进园游览 Old Faithful、West Thumb、Yellowstone Lake 和 Hayden Valley。",
     transport: "黄石段 Toyota Sienna 自驾，从 West Yellowstone 进园，经 Madison Junction、Old Faithful、West Thumb、Yellowstone Lake 前往 Hayden Valley。",
-    lodging: "Canyon Lodge / Lake 区住宿待确认。",
+    lodging: "Canyon Lodge / Lake 区住宿，以最终预订为准。",
     lunch: "Old Faithful 午餐 / 休息。",
     schedule: {
       morning: "早餐并 check-out；从 West Yellowstone 进园，前往 Old Faithful，结合喷发预测游览 Old Faithful 和 Upper Geyser Basin。",
@@ -209,7 +209,7 @@ const itinerary = [
     weatherLocation: weatherLocations.yellowstoneCanyon,
     summary: "Canyon Village 和黄石大峡谷核心日，傍晚回 Mammoth / Gardiner / Livingston 方向。",
     transport: "黄石段 Toyota Sienna 自驾，从 Canyon / Lake 区出发，经 Grand Canyon of the Yellowstone、Hayden Valley optional、Norris、Mammoth、Gardiner 返回 Livingston 方向。",
-    lodging: "Yellowstone's Edge / Livingston 方向住宿待确认。",
+    lodging: "Yellowstone's Edge / Livingston 方向住宿，以最终预订为准。",
     lunch: "Canyon Village 午餐 / 补给。",
     schedule: {
       morning: "早餐并 check-out；前往 Canyon Village，午餐、上厕所和补给后进入黄石大峡谷区域。",
@@ -292,14 +292,14 @@ const itinerary = [
     coverImage: "assets/san-francisco.png",
     weatherLocation: weatherLocations.sanFrancisco,
     summary: "从拉斯维加斯飞回旧金山，抵达后进入返程前缓冲阶段。",
-    transport: "拉斯维加斯飞旧金山，航班待确认。抵达后交通待确认。",
-    lodging: "旧金山酒店待确认。",
+    transport: "拉斯维加斯飞旧金山，航班和抵达后交通出发前同步。",
+    lodging: "旧金山酒店以最终预订为准。",
     schedule: {
       morning: "从 Encore at Wynn Las Vegas / 安可酒店退房并前往机场。",
       afternoon: "飞回旧金山，前往酒店。",
       evening: "轻松晚餐，整理返程购物和行李。"
     },
-    notes: "确认航班、旧金山最后两晚住宿和机场交通；这天不再安排购物或正餐，只保留机场缓冲。"
+    notes: "航班、旧金山最后两晚住宿和机场交通出发前同步；这天不再安排购物或正餐，只保留机场缓冲。"
   },
   {
     date: "2026-06-28",
@@ -308,11 +308,11 @@ const itinerary = [
     coverImage: "assets/san-francisco.png",
     weatherLocation: weatherLocations.sanFrancisco,
     summary: "旧金山返程前缓冲日，用于补充未完成安排和最终整理。",
-    transport: "旧金山市内交通待确认。",
-    lodging: "旧金山酒店待确认。",
+    transport: "旧金山市内交通按当天安排确定。",
+    lodging: "旧金山酒店以最终预订为准。",
     schedule: {
-      morning: "填写上午安排。",
-      afternoon: "填写下午安排，预留购物或收拾时间。",
+      morning: "早餐后休息，整理前几天购物和行李。",
+      afternoon: "预留补充购物、退换货或轻松散步时间，不安排高强度景点。",
       evening: "整理全部行李，确认第二天返程手续。"
     },
     notes: "检查护照、行李重量、退税或购物票据、机场交通。"
@@ -323,15 +323,15 @@ const itinerary = [
     city: "旧金山 / 返回北京",
     coverImage: "assets/san-francisco.png",
     weatherLocation: weatherLocations.sanFrancisco,
-    summary: "计划从旧金山返回北京，返程机票未买，具体时间待确认。",
-    transport: "旧金山返回北京，航班未购买。前往 SFO 的方式待确认。",
+    summary: "计划从旧金山返回北京，返程机票安排后同步具体时间。",
+    transport: "旧金山返回北京，航班安排后同步。前往 SFO 的方式按航班时间确定。",
     lodging: "返程日无住宿，除非航班改为次日。",
     schedule: {
       morning: "根据航班时间安排退房、早餐和前往机场。",
       afternoon: "办理值机、托运和安检。",
-      evening: "返程飞往北京，具体时间待确认。"
+      evening: "返程飞往北京，航班时间更新后同步。"
     },
-    notes: "这是最重要的待确认项：购买返京机票后更新航班号、起飞时间和到达时间。"
+    notes: "购买返京机票后同步航班号、起飞时间和到达时间。"
   }
 ];
 
@@ -340,28 +340,28 @@ const weekdayZh = ["周日", "周一", "周二", "周三", "周四", "周五", "
 const journeyGroups = [
   {
     id: "bay",
-    title: "海湾序章之旅",
+    title: "海湾序章",
     dateRange: "2026-06-11 至 2026-06-17",
     summary: "旧金山湾区、恶魔岛、金门桥、Napa、斯坦福毕业典礼、Half Moon Bay、蒙特雷和 Livermore。",
     dates: ["2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17"]
   },
   {
     id: "yellowstone",
-    title: "山野黄石之旅",
+    title: "山野黄石",
     dateRange: "2026-06-18 至 2026-06-22",
     summary: "从旧金山飞往博兹曼，进入黄石北门、Mammoth、Grand Prismatic、Old Faithful 和黄石大峡谷。",
     dates: ["2026-06-18", "2026-06-19", "2026-06-20", "2026-06-21", "2026-06-22"]
   },
   {
     id: "vegas",
-    title: "霓虹假日之旅",
+    title: "霓虹假日",
     dateRange: "2026-06-23 至 2026-06-26",
     summary: "博兹曼飞抵拉斯维加斯，入住 Encore，集中安排中南 Strip、Boulder City、Chinatown、Wynn、Sphere 和 show。",
     dates: ["2026-06-23", "2026-06-24", "2026-06-25", "2026-06-26"]
   },
   {
     id: "return",
-    title: "返程缓冲之旅",
+    title: "返程缓冲",
     dateRange: "2026-06-27 至 2026-06-29",
     summary: "从拉斯维加斯返回旧金山，保留返程前缓冲、购物整理和返京航班确认时间。",
     dates: ["2026-06-27", "2026-06-28", "2026-06-29"]
