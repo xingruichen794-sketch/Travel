@@ -37,16 +37,16 @@ const itinerary = [
     city: "旧金山",
     coverImage: "assets/sf-cloud-sea.png",
     weatherLocation: weatherLocations.sanFrancisco,
-    summary: "旧金山云海、金门桥观景点和市中心购物，晚上 17:30 到 Redwood City 吃 Sushi Ai。",
-    transport: "Toyota Sienna 自驾，按云海观景点和市中心停车情况调整路线。",
+    summary: "上午 10:35 恶魔岛已预约，下午去金门桥看景，晚上 17:30 到 Redwood City 吃 Sushi Ai。",
+    transport: "Toyota Sienna 自驾到旧金山市区，恶魔岛段需按码头停车和登船时间安排。",
     lodging: "旧金山 Airbnb 民宿：36 Henderson Place。",
     lunch: "Dumpling Home（San Francisco）。",
     schedule: {
-      morning: "看旧金山云海，视天气选择 Twin Peaks 或金门桥观景点。",
-      afternoon: "前往 Westfield / Union Square 购物和城市轻松游览，下午预留时间南下 Redwood City。",
+      morning: "恶魔岛 Alcatraz 10:35 已预约，提前到码头停车、取票或排队登船。",
+      afternoon: "恶魔岛结束后安排 Dumpling Home 午饭；下午去金门桥观景点看景，可按天气选择 Battery Spencer、Golden Gate Overlook 或 Crissy Field。",
       evening: "晚饭安排 Sushi Ai（Redwood City）17:30，之后返回 Airbnb。"
     },
-    notes: "云海受天气影响明显，当天早上根据能见度决定观景点；Sushi Ai 预约时间为 17:30，需预留市区到 Redwood City 的路程和停车时间。"
+    notes: "恶魔岛预约时间为 10:35，需确认集合地点、停车和登船要求；金门桥看景受雾和风影响明显；Sushi Ai 预约时间为 17:30，需预留旧金山到 Redwood City 的路程和停车时间。"
   },
   {
     date: "2026-06-13",
@@ -240,7 +240,7 @@ const itinerary = [
     city: "拉斯维加斯",
     coverImage: "assets/las-vegas.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "拉斯维加斯第二个完整日，可安排购物、酒店设施或周边短途活动。",
+    summary: "拉斯维加斯第一个完整日，可安排购物、酒店设施或周边短途活动。",
     transport: "市内打车为主；如去周边景点，需另行确认包车或租车。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
     schedule: {
@@ -256,19 +256,35 @@ const itinerary = [
     city: "拉斯维加斯",
     coverImage: "assets/las-vegas.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "拉斯维加斯缓冲日，为次日返回旧金山预留整理时间。",
-    transport: "市内打车为主，确认次日机场交通。",
+    summary: "拉斯维加斯第二个完整日，继续酒店、购物或周边轻量安排。",
+    transport: "市内打车为主；如去周边景点，需另行确认包车或租车。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
     schedule: {
       morning: "填写上午安排。",
       afternoon: "填写下午安排或购物补给。",
-      evening: "整理行李，确认第二天飞旧金山航班。"
+      evening: "填写晚间安排，保留轻松休息时间。"
     },
-    notes: "确认退房时间、机场距离和航班行李额度。"
+    notes: "夏季炎热，户外活动需控制时间并准备饮水；确认 Encore 续住和房卡权限。"
   },
   {
     date: "2026-06-26",
     dayLabel: "第 16 天",
+    city: "拉斯维加斯",
+    coverImage: "assets/las-vegas.png",
+    weatherLocation: weatherLocations.lasVegas,
+    summary: "拉斯维加斯新增停留日，酒店不变，为次日返回旧金山预留整理时间。",
+    transport: "市内打车为主，确认次日机场交通。",
+    lodging: "Encore at Wynn Las Vegas / 安可酒店。",
+    schedule: {
+      morning: "填写上午安排，节奏以休息和酒店内活动为主。",
+      afternoon: "填写下午安排或购物补给；开始整理返回旧金山和返程行李。",
+      evening: "整理行李，确认第二天飞旧金山航班、机场交通和退房时间。"
+    },
+    notes: "这是新增的拉斯维加斯停留日；确认 Encore 住宿覆盖至 6/27 早上退房。"
+  },
+  {
+    date: "2026-06-27",
+    dayLabel: "第 17 天",
     city: "返回旧金山",
     coverImage: "assets/san-francisco.png",
     weatherLocation: weatherLocations.sanFrancisco,
@@ -283,8 +299,8 @@ const itinerary = [
     notes: "确认航班、旧金山最后两晚住宿和机场交通。"
   },
   {
-    date: "2026-06-27",
-    dayLabel: "第 17 天",
+    date: "2026-06-28",
+    dayLabel: "第 18 天",
     city: "旧金山",
     coverImage: "assets/san-francisco.png",
     weatherLocation: weatherLocations.sanFrancisco,
@@ -299,8 +315,8 @@ const itinerary = [
     notes: "检查护照、行李重量、退税或购物票据、机场交通。"
   },
   {
-    date: "2026-06-28",
-    dayLabel: "第 18 天",
+    date: "2026-06-29",
+    dayLabel: "第 19 天",
     city: "旧金山 / 返回北京",
     coverImage: "assets/san-francisco.png",
     weatherLocation: weatherLocations.sanFrancisco,
