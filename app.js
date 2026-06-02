@@ -224,15 +224,15 @@ const itinerary = [
     city: "博兹曼 / 拉斯维加斯",
     coverImage: "assets/bozeman-return-sienna.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "从黄石住宿退房，开 Toyota Sienna 回博兹曼补给并还车，晚上 WN1137 抵达拉斯维加斯。",
+    summary: "从黄石住宿退房，开 Toyota Sienna 回博兹曼补给并还车，晚上 WN1137 抵达拉斯维加斯并入住 Encore。",
     transport: "黄石段 Toyota Sienna 自驾至 BZN 并还车。Southwest Airlines WN1137，19:10 从博兹曼出发，20:20 到达拉斯维加斯。拉斯维加斯市内以打车为主。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
     schedule: {
       morning: "从 Yellowstone's Edge / Livingston 方向住宿退房，整理黄石段行李，检查证件、充电设备和车内物品。",
       afternoon: "开往 Bozeman，按时间安排午饭或补给；前往 BZN 还车并办理 WN1137 登机。",
-      evening: "20:20 抵达拉斯维加斯，打车前往 Encore at Wynn Las Vegas / 安可酒店办理入住。"
+      evening: "20:20 抵达拉斯维加斯，打车前往 Encore at Wynn Las Vegas / 安可酒店办理入住；不安排正式晚饭，只在 Encore / Wynn 酒店和赌场轻松走一圈。"
     },
-    notes: "确认 WN1137 行李政策、BZN 还车时间、从 Livingston 到机场的路况缓冲、Encore 入住时间和 LAS 打车上车点。"
+    notes: "确认 WN1137 行李政策、BZN 还车时间、从 Livingston 到机场的路况缓冲、Encore 入住时间和 LAS 打车上车点；黄石转场后避免安排需要预约的正式晚饭。"
   },
   {
     date: "2026-06-24",
@@ -240,15 +240,16 @@ const itinerary = [
     city: "拉斯维加斯",
     coverImage: "assets/las-vegas.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "拉斯维加斯第一个完整日，可安排购物、酒店设施或周边短途活动。",
-    transport: "市内打车为主；如去周边景点，需另行确认包车或租车。",
+    summary: "中南 Strip 购物日：Crystals、Caesars / Forum Shops，晚饭 Peter Luger，晚上 O Show。",
+    transport: "市内打车为主。路线集中为 Encore → Cosmopolitan / Crystals → Caesars → Bellagio → Encore。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
+    lunch: "Eggslut（The Cosmopolitan，早餐/早午饭；不强行预约，早去排队）。",
     schedule: {
-      morning: "填写上午安排。",
-      afternoon: "填写下午安排。",
-      evening: "填写晚间安排。"
+      morning: "从 Encore 打车到 The Cosmopolitan，早餐/早午饭安排 Eggslut；之后前往 The Shops at Crystals 购物。",
+      afternoon: "继续 Crystals 购物；下午转到 Caesars Palace / Forum Shops，顺路看 Caesars 区域并控制体力。",
+      evening: "晚饭安排 Peter Luger Steak House Las Vegas（Caesars Palace），建议预约 17:00-17:30；晚上看 O by Cirque du Soleil（Bellagio），建议买 21:00 场，饭后步行或打车到 Bellagio。"
     },
-    notes: "夏季炎热，户外活动需控制时间并准备饮水。"
+    notes: "Peter Luger 和 O Show 都需要提前预约/买票；如果 O Show 场次不是 21:00，晚饭时间需随之调整。夏季炎热，购物点之间尽量打车或走室内连通区域。"
   },
   {
     date: "2026-06-25",
@@ -256,15 +257,16 @@ const itinerary = [
     city: "拉斯维加斯",
     coverImage: "assets/las-vegas.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "拉斯维加斯第二个完整日，继续酒店、购物或周边轻量安排。",
-    transport: "市内打车为主；如去周边景点，需另行确认包车或租车。",
+    summary: "上午 Pro Gun Vegas，午饭按结束时间选 Ping Pang Pong 或 Weera Thai，晚上 Raku。",
+    transport: "打车或包车为主。路线集中为 Encore → Boulder City / Pro Gun Vegas → Gold Coast 或 Chinatown → Encore。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
+    lunch: "Ping Pang Pong（金海岸 Gold Coast）或 Weera Thai Chinatown / Sahara，按 Pro Gun Vegas 结束时间决定。",
     schedule: {
-      morning: "填写上午安排。",
-      afternoon: "填写下午安排或购物补给。",
-      evening: "填写晚间安排，保留轻松休息时间。"
+      morning: "Pro Gun Vegas / Pro Gun Club，建议预约 9:00-10:00；从 Encore 出发，夏天早去更合理。",
+      afternoon: "午饭在 Ping Pang Pong 或 Weera Thai 之间选择；之后回 Encore 休息，避开最热时段。",
+      evening: "晚饭安排 Raku / Aburiya Raku（Chinatown / Spring Mountain），建议预约 18:00-18:30；Oyster Bar at Palace Station 只作为大家还有体力时的可选夜宵。"
     },
-    notes: "夏季炎热，户外活动需控制时间并准备饮水；确认 Encore 续住和房卡权限。"
+    notes: "Pro Gun Vegas、Raku 需要提前预约；Pro Gun 往返时间较长，午饭不要排太紧。Oyster Bar 不是必须项，避免当天行程过满。"
   },
   {
     date: "2026-06-26",
@@ -272,15 +274,16 @@ const itinerary = [
     city: "拉斯维加斯",
     coverImage: "assets/las-vegas.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "拉斯维加斯新增停留日，酒店不变，为次日返回旧金山预留整理时间。",
-    transport: "市内打车为主，确认次日机场交通。",
+    summary: "北 Strip 轻松日：Wynn / Encore、Sphere / Palazzo、Mott 32 和 Awakening。",
+    transport: "市内打车为主。路线集中为 Encore / Wynn → Sphere / Venetian / Palazzo → Wynn。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
+    lunch: "The Buffet at Wynn，建议抢 10:30-11:00 priority seating。",
     schedule: {
-      morning: "填写上午安排，节奏以休息和酒店内活动为主。",
-      afternoon: "填写下午安排或购物补给；开始整理返回旧金山和返程行李。",
-      evening: "整理行李，确认第二天飞旧金山航班、机场交通和退房时间。"
+      morning: "早午饭安排 The Buffet at Wynn，建议 10:30-11:00；之后在 Wynn / Encore 购物和酒店内活动，少走路。",
+      afternoon: "Sphere show 暂排下午或傍晚；购票前确认当天节目。如果不是想看的内容，可改为只看 Sphere 外观或取消。",
+      evening: "晚饭安排 Mott 32（The Palazzo / Venetian），建议预约 17:30；晚上看 Awakening（Wynn），建议约 21:00，Mott 32 回 Wynn 很近。"
     },
-    notes: "这是新增的拉斯维加斯停留日；确认 Encore 住宿覆盖至 6/27 早上退房。"
+    notes: "Wynn Buffet priority seating、Sphere、Mott 32、Awakening 都需要提前预约/买票；先定 show 时间，再围绕 show 时间定晚饭。确认 Encore 住宿覆盖至 6/27 早上退房。"
   },
   {
     date: "2026-06-27",
@@ -296,7 +299,7 @@ const itinerary = [
       afternoon: "飞回旧金山，前往酒店。",
       evening: "轻松晚餐，整理返程购物和行李。"
     },
-    notes: "确认航班、旧金山最后两晚住宿和机场交通。"
+    notes: "确认航班、旧金山最后两晚住宿和机场交通；这天不再安排购物或正餐，只保留机场缓冲。"
   },
   {
     date: "2026-06-28",
