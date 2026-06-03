@@ -135,6 +135,21 @@
         </div>
       </section>
 
+      <section class="transport-status" aria-labelledby="transport-status-title">
+        <div class="section-heading">
+          <p class="eyebrow">交通与航班</p>
+          <h2 id="transport-status-title">航班状态与城市转场</h2>
+          <p class="section-heading__lead">已确定航班会显示计划时间和实时状态；未购买航班先保留路线，安排好后继续同步。</p>
+        </div>
+
+        <div
+          class="flight-grid"
+          id="transportStatusList"
+          data-flight-status-endpoint=""
+          aria-live="polite"
+        ></div>
+      </section>
+
       <section class="route-map" aria-labelledby="route-map-title">
         <div class="section-heading">
           <p class="eyebrow">路线图</p>

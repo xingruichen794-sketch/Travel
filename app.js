@@ -367,6 +367,63 @@ const journeyGroups = [
     dates: ["2026-06-27", "2026-06-28", "2026-06-29"]
   }
 ];
+const flightSegments = [
+  {
+    id: "mu589",
+    flightNumber: "MU589",
+    airline: "China Eastern / 东方航空",
+    date: "2026-06-11",
+    routeLabel: "上海浦东 PVG → 旧金山 SFO",
+    plannedTime: "6/11 12:30 PVG 出发，6/11 09:05 SFO 到达",
+    statusLabel: "原计划",
+    statusSource: "等待实时状态",
+    query: { flight: "MU589", date: "2026-06-11" }
+  },
+  {
+    id: "as2062",
+    flightNumber: "AS2062",
+    airline: "Alaska Airlines / 阿拉斯加航空",
+    date: "2026-06-18",
+    routeLabel: "旧金山 SFO → 博兹曼 BZN",
+    plannedTime: "6/18 13:56 SFO 出发，17:11 BZN 到达",
+    statusLabel: "原计划",
+    statusSource: "等待实时状态",
+    query: { flight: "AS2062", date: "2026-06-18" }
+  },
+  {
+    id: "wn1137",
+    flightNumber: "WN1137",
+    airline: "Southwest Airlines / 美国西南航空",
+    date: "2026-06-23",
+    routeLabel: "博兹曼 BZN → 拉斯维加斯 LAS",
+    plannedTime: "6/23 19:10 BZN 出发，20:20 LAS 到达",
+    statusLabel: "原计划",
+    statusSource: "等待实时状态",
+    query: { flight: "WN1137", date: "2026-06-23" }
+  },
+  {
+    id: "las-sfo",
+    flightNumber: "LAS → SFO",
+    airline: "拉斯维加斯返回旧金山",
+    date: "2026-06-27",
+    routeLabel: "拉斯维加斯 LAS → 旧金山 SFO",
+    plannedTime: "6/27 从 Encore 退房后按航班时间前往 LAS",
+    statusLabel: "航班安排后同步",
+    statusSource: "手动更新",
+    query: null
+  },
+  {
+    id: "sfo-beijing",
+    flightNumber: "SFO → 北京",
+    airline: "旧金山返回北京",
+    date: "2026-06-29",
+    routeLabel: "旧金山 SFO → 北京",
+    plannedTime: "6/29 按返京航班时间前往 SFO",
+    statusLabel: "航班安排后同步",
+    statusSource: "手动更新",
+    query: null
+  }
+];
 
 const list = document.querySelector("#itineraryList");
 const expandAllButton = document.querySelector("#expandAll");
@@ -374,6 +431,8 @@ const collapseAllButton = document.querySelector("#collapseAll");
 const journeyTabs = document.querySelector("#journeyTabs");
 const journeySummary = document.querySelector("#journeySummary");
 const journeyPanels = document.querySelector("#journeyPanels");
+const transportStatusList = document.querySelector("#transportStatusList");
+const flightStatusEndpoint = transportStatusList?.dataset.flightStatusEndpoint?.trim() || "";
 const weatherApiUrl = "https://api.open-meteo.com/v1/forecast";
 const weatherCodeLabels = {
   0: "晴",
@@ -547,6 +606,137 @@ function renderLunch(lunch) {
           <p>${lunch}</p>
         </section>
   `;
+}
+
+function createFlightCard(segment) {
+  const article = document.createElement("article");
+  article.className = "flight-card";
+  article.dataset.flightId = segment.id;
+
+  article.innerHTML = `
+    <div class="flight-card__top">
+      <span class="flight-card__airline">${segment.airline}</span>
+      <span class="flight-card__status" data-flight-status="${segment.id}">${segment.statusLabel}</span>
+    </div>
+    <div class="flight-card__number">${segment.flightNumber}</div>
+    <div class="flight-card__route">${segment.routeLabel}</div>
+    <div class="flight-card__time">${segment.plannedTime}</div>
+    <div class="flight-card__source" data-flight-source="${segment.id}">${segment.statusSource}</div>
+  `;
+
+  return article;
+}
+
+function renderTransportStatuses() {
+  if (!transportStatusList) {
+    return;
+  }
+
+  flightSegments.forEach((segment) => {
+    transportStatusList.appendChild(createFlightCard(segment));
+  });
+}
+
+function setFlightCardStatus(segmentId, statusText, sourceText, state = "") {
+  const status = document.querySelector(`[data-flight-status="${segmentId}"]`);
+  const source = document.querySelector(`[data-flight-source="${segmentId}"]`);
+
+  if (status) {
+    status.textContent = statusText;
+    status.className = `flight-card__status${state ? ` flight-card__status--${state}` : ""}`;
+  }
+
+  if (source) {
+    source.textContent = sourceText;
+  }
+}
+
+function getFlightStatusUrl(segment) {
+  const url = new URL(flightStatusEndpoint, window.location.href);
+  url.searchParams.set("flight", segment.query.flight);
+  url.searchParams.set("date", segment.query.date);
+  return url.toString();
+}
+
+function getFlightState(status) {
+  if (["active", "landed"].includes(status)) {
+    return "ok";
+  }
+
+  if (["cancelled", "incident", "diverted"].includes(status)) {
+    return "alert";
+  }
+
+  if (status === "delayed") {
+    return "warning";
+  }
+
+  return "";
+}
+
+async function fetchFlightStatus(segment) {
+  const response = await fetch(getFlightStatusUrl(segment));
+
+  if (response.status === 404) {
+    return null;
+  }
+
+  if (!response.ok) {
+    throw new Error(`Flight status request failed: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+function formatFlightStatusSource(data) {
+  const parts = [];
+
+  if (Number.isFinite(data.delayMinutes) && data.delayMinutes > 0) {
+    parts.push(`延误 ${data.delayMinutes} 分钟`);
+  }
+
+  if (data.updatedAt) {
+    const updatedAt = new Date(data.updatedAt);
+
+    if (!Number.isNaN(updatedAt.getTime())) {
+      parts.push(`更新 ${updatedAt.toLocaleString("zh-CN", {
+        month: "numeric",
+        day: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
+      })}`);
+    }
+  }
+
+  return parts.length ? parts.join(" · ") : "Aviationstack 实时状态";
+}
+
+async function loadFlightStatuses() {
+  if (!transportStatusList || !flightStatusEndpoint || !window.fetch) {
+    return;
+  }
+
+  await Promise.all(flightSegments
+    .filter((segment) => segment.query)
+    .map(async (segment) => {
+      try {
+        const data = await fetchFlightStatus(segment);
+
+        if (!data) {
+          setFlightCardStatus(segment.id, "出发前更新", "暂未查到实时状态");
+          return;
+        }
+
+        setFlightCardStatus(
+          segment.id,
+          data.statusText || "出发前更新",
+          formatFlightStatusSource(data),
+          getFlightState(data.status)
+        );
+      } catch (error) {
+        setFlightCardStatus(segment.id, "状态暂不可用", "实时接口暂不可用", "warning");
+      }
+    }));
 }
 
 function createDayCard(item, index) {
@@ -733,8 +923,10 @@ function renderItinerary() {
 }
 
 renderItinerary();
+renderTransportStatuses();
 
 loadWeatherForecasts();
+loadFlightStatuses();
 
 if (expandAllButton) {
   expandAllButton.addEventListener("click", () => setAllCards(true));
