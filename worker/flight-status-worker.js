@@ -158,7 +158,15 @@ export default {
 
       return jsonResponse(request, normalizeFlight(match, flight, date));
     } catch (error) {
-      return jsonResponse(request, { error: "Flight status unavailable" }, 502);
+      return jsonResponse(request, {
+        flightNumber: flight,
+        status: "not_found",
+        statusText: "出发前更新",
+        departure: null,
+        arrival: null,
+        delayMinutes: null,
+        updatedAt: new Date().toISOString()
+      }, 404);
     }
   }
 };

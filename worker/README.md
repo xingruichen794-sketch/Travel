@@ -24,3 +24,5 @@ This Cloudflare Worker proxies Aviationstack flight status requests for the trav
    ```
 
 The API key must never be committed to this repository or placed in frontend JavaScript.
+
+Future flight dates may not be available from Aviationstack until closer to departure. In that case the Worker returns `出发前更新` so the itinerary site can keep showing the planned schedule.
