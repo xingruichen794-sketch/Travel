@@ -20,16 +20,16 @@ const itinerary = [
     city: "旧金山",
     coverImage: "assets/sfo-arrival-sienna.png",
     weatherLocation: weatherLocations.sanFrancisco,
-    summary: "SFO 接机后领取 Toyota Sienna，入住 Airbnb，午饭定为 The Kitchen 廚房製造。",
-    transport: "6/11-6/18 旧金山段租 Toyota Sienna。女朋友妈妈乘坐 MU589，6/11 12:30 从上海浦东出发，6/11 9:05 抵达旧金山。爸妈去程机票未定。",
-    lodging: "旧金山 Airbnb 民宿：36 Henderson Place，住宿至 6/18 早上退房。",
+    summary: "SFO 接机后领取 Toyota Sienna，入住 3639 Haven Avenue 公寓，午饭定为 The Kitchen 廚房製造，晚饭 Sushi Ai 17:30。",
+    transport: "6/11-6/18 旧金山段租 Toyota Sienna。女朋友妈妈乘坐 MU589，6/11 12:30 从上海浦东出发，6/11 9:05 抵达旧金山。",
+    lodging: "3639 Haven Avenue 公寓，住宿 6/11-6/16 晚。",
     lunch: "The Kitchen 廚房製造（Millbrae）。",
     schedule: {
-      morning: "SFO 接机；女朋友妈妈抵达后完成入境、取行李，并领取 Toyota Sienna。爸妈去程航班出发前同步。",
-      afternoon: "前往 36 Henderson Place Airbnb，办理入住或寄存行李；采购饮用水、早餐和生活用品。",
-      evening: "晚饭安排 Chong Qing Xiao Mian 重慶小面（San Francisco），之后回 Airbnb 休息倒时差。"
+      morning: "SFO 接机；女朋友妈妈抵达后完成入境、取行李，并领取 Toyota Sienna。",
+      afternoon: "前往 3639 Haven Avenue 公寓，办理入住或寄存行李；采购饮用水、早餐和生活用品。",
+      evening: "晚饭安排 Sushi Ai（Redwood City）17:30，之后回公寓休息倒时差。"
     },
-    notes: "爸妈 6/3 签证，去程机票未定；确认机场接送、民宿入住时间和第一天采购清单。"
+    notes: "确认机场接送、公寓入住时间、第一天采购清单和 Sushi Ai 预约。"
   },
   {
     date: "2026-06-12",
@@ -37,16 +37,16 @@ const itinerary = [
     city: "旧金山",
     coverImage: "assets/sf-cloud-sea.png",
     weatherLocation: weatherLocations.sanFrancisco,
-    summary: "上午 10:35 恶魔岛已预约，下午去金门桥看景，晚上 17:30 到 Redwood City 吃 Sushi Ai。",
+    summary: "上午 10:35 恶魔岛已预约，下午旧金山市区轻松调整，晚上吃韶山印象。",
     transport: "Toyota Sienna 自驾到旧金山市区，恶魔岛段需按码头停车和登船时间安排。",
-    lodging: "旧金山 Airbnb 民宿：36 Henderson Place。",
+    lodging: "3639 Haven Avenue 公寓。",
     lunch: "Dumpling Home（San Francisco）。",
     schedule: {
       morning: "恶魔岛 Alcatraz 10:35 已预约，提前到码头停车、取票或排队登船。",
-      afternoon: "恶魔岛结束后安排 Dumpling Home 午饭；下午去金门桥观景点看景，可按天气选择 Battery Spencer、Golden Gate Overlook 或 Crissy Field。",
-      evening: "晚饭安排 Sushi Ai（Redwood City）17:30，之后返回 Airbnb。"
+      afternoon: "恶魔岛结束后安排 Dumpling Home 午饭；下午在旧金山市区轻松调整，按体力回公寓休息或短逛。",
+      evening: "晚饭安排韶山印象，之后返回 3639 Haven Avenue 公寓。"
     },
-    notes: "恶魔岛预约时间为 10:35，需确认集合地点、停车和登船要求；金门桥看景受雾和风影响明显；Sushi Ai 预约时间为 17:30，需预留旧金山到 Redwood City 的路程和停车时间。"
+    notes: "恶魔岛预约时间为 10:35，需确认集合地点、停车和登船要求；晚饭前预留市区到餐厅的路程和停车时间。"
   },
   {
     date: "2026-06-13",
@@ -56,12 +56,12 @@ const itinerary = [
     weatherLocation: weatherLocations.napa,
     summary: "Napa 一日往返，重点安排 Opus One Winery，晚饭去 Geyserville 的 Cyrus。",
     transport: "Toyota Sienna 自驾从旧金山往返 Napa；酒庄预约和当天司机安排需提前确认。",
-    lodging: "旧金山 Airbnb 民宿：36 Henderson Place。",
+    lodging: "3639 Haven Avenue 公寓。",
     lunch: "Bouchon Bistro（Yountville）。",
     schedule: {
-      morning: "从 Airbnb 出发前往 Napa，预留路上时间和酒庄停车时间。",
+      morning: "从 3639 Haven Avenue 公寓出发前往 Napa，预留路上时间和酒庄停车时间。",
       afternoon: "参观 Opus One Winery；如有余力，在 Yountville 或 St. Helena 短暂停留。",
-      evening: "Napa 段结束后前往 Geyserville，晚饭安排 Cyrus（Geyserville），之后返回 Airbnb。"
+      evening: "Napa 段结束后前往 Geyserville，晚饭安排 Cyrus（Geyserville），之后返回公寓。"
     },
     notes: "Opus One Winery 需提前确认预约时间；Cyrus 预约时间更新后同步。当天不要安排过多酒庄，开车人需避开饮酒；晚饭后回旧金山路程较长，需预留体力和夜间驾驶时间。"
   },
@@ -73,7 +73,7 @@ const itinerary = [
     weatherLocation: weatherLocations.stanford,
     summary: "全天参加女朋友的斯坦福毕业典礼，午饭在 Palo Alto，晚饭安排 Macarena。",
     transport: "Toyota Sienna 自驾从旧金山前往 Stanford，出发时间按典礼入场和停车要求确认。",
-    lodging: "旧金山 Airbnb 民宿：36 Henderson Place。",
+    lodging: "3639 Haven Avenue 公寓。",
     lunch: "Dumpling Hours（Palo Alto）。",
     schedule: {
       morning: "前往 Stanford，参加毕业典礼相关活动。",
@@ -88,14 +88,14 @@ const itinerary = [
     city: "Half Moon Bay",
     coverImage: "assets/half-moon-bay-horseback.png",
     weatherLocation: weatherLocations.halfMoonBay,
-    summary: "只安排 Half Moon Bay，看海和骑马，晚上安排唯一一顿 Airbnb 家庭晚饭。",
+    summary: "只安排 Half Moon Bay，看海和骑马，晚上安排唯一一顿公寓家庭晚饭。",
     transport: "Toyota Sienna 自驾往返 Half Moon Bay。",
-    lodging: "旧金山 Airbnb 民宿：36 Henderson Place。",
+    lodging: "3639 Haven Avenue 公寓。",
     lunch: "Sam's Chowder House（Half Moon Bay）。",
     schedule: {
       morning: "前往 Half Moon Bay 看海，安排海边散步和观景。",
       afternoon: "Half Moon Bay 骑马；回程顺路采购家庭晚饭食材。",
-      evening: "Airbnb 家庭晚饭，作为本次湾区段唯一一顿自己做饭。"
+      evening: "公寓家庭晚饭，作为本次湾区段唯一一顿自己做饭。"
     },
     notes: "家庭晚饭只安排这一顿；骑马项目需确认预约时间、年龄/体重限制、鞋服要求和停车点。"
   },
@@ -107,29 +107,29 @@ const itinerary = [
     weatherLocation: weatherLocations.monterey,
     summary: "蒙特雷 09:00 四小时观鲸已预订，下午蒙特雷水族馆，晚饭回湾区吃 In-N-Out。",
     transport: "Toyota Sienna 自驾从旧金山往返蒙特雷；09:00 观鲸需很早出发，预留停车和登船时间。",
-    lodging: "旧金山 Airbnb 民宿：36 Henderson Place。",
+    lodging: "3639 Haven Avenue 公寓。",
     lunch: "Old Fisherman's Grotto（Monterey）。",
     schedule: {
-      morning: "参加 Whale Watching Tour From Monterey，4-Hour Whale Watching Tour 09:00，5 Adults，Booking reference BR-1405224561。",
+      morning: "参加 Whale Watching Tour From Monterey，4-Hour Whale Watching Tour 09:00，3 Adults，Booking reference BR-1405224561。",
       afternoon: "参观蒙特雷水族馆，控制节奏并预留回程时间。",
-      evening: "晚饭安排 In-N-Out Burger（Daly City），之后返回 Airbnb。"
+      evening: "晚饭安排 In-N-Out Burger（Daly City），之后返回公寓。"
     },
-    notes: "观鲸订单总额 $425.00，$85.00 x 5 Adults；页面显示将于 06/14/26 扣款。观鲸受天气和海况影响，出发前确认船班；准备防风外套和晕船药。"
+    notes: "观鲸预约人数为 3 Adults，Booking reference BR-1405224561。观鲸受天气和海况影响，出发前确认船班；准备防风外套和晕船药。"
   },
   {
     date: "2026-06-17",
     dayLabel: "第 7 天",
-    city: "旧金山",
+    city: "Livermore / Half Moon Bay",
     coverImage: "assets/livermore-outlets.png",
     weatherLocation: weatherLocations.livermore,
-    summary: "Livermore Outlets 购物和行李整理，晚上 21:00 San Ho Won 已预约。",
-    transport: "Toyota Sienna 自驾前往 Livermore Outlets；确认次日还车和去 SFO 的时间；6/18 AS2062 13:56 从旧金山飞博兹曼。",
-    lodging: "旧金山 Airbnb 民宿：36 Henderson Place，6/18 早上退房。",
+    summary: "Livermore Outlets 购物，下午前往半月湾丽思卡尔顿，晚上 21:00 San Ho Won 已预约。",
+    transport: "Toyota Sienna 自驾前往 Livermore Outlets；下午从 3639 Haven Avenue 公寓整理离开并前往半月湾酒店；6/18 AS2062 13:56 从旧金山飞博兹曼。",
+    lodging: "The Ritz-Carlton, Half Moon Bay / 半月湾丽思卡尔顿酒店。",
     lunch: "In-N-Out Burger（Livermore）。",
     schedule: {
       morning: "前往 Livermore Outlets 购物，控制购物时间避免影响下午整理。",
-      afternoon: "返回 Airbnb，整理行李，确认黄石段 Toyota Sienna、住宿、路线和天气。",
-      evening: "San Ho Won 21:00，Reservation #EP73R444PKC，Party of 5。"
+      afternoon: "从 3639 Haven Avenue 公寓整理离开，前往 The Ritz-Carlton, Half Moon Bay / 半月湾丽思卡尔顿酒店办理入住或寄存行李；确认黄石段 Toyota Sienna、住宿、路线和天气。",
+      evening: "San Ho Won 21:00，Reservation #EP73R444PKC，3 人。晚饭后返回半月湾酒店。"
     },
     notes: "确认 AS2062 行李额度、SFO 出发航站楼、黄石段 Toyota Sienna 取车信息、保暖衣物、雨具、防晒、充电设备和证件；San Ho Won 预约已确认。"
   },
@@ -140,11 +140,11 @@ const itinerary = [
     coverImage: "assets/bozeman-sienna-transfer.png",
     weatherLocation: weatherLocations.bozeman,
     summary: "退房还车后乘 AS2062 抵达博兹曼，领取黄石段 Toyota Sienna，补给后入住 Livingston 方向 Airbnb。",
-    transport: "归还 6/11-6/18 旧金山段 Toyota Sienna。Alaska Airlines AS2062，5 人同行，13:56 从旧金山出发，17:11 到达博兹曼。抵达 BZN 后领取黄石段 Toyota Sienna。",
+    transport: "归还 6/11-6/18 旧金山段 Toyota Sienna。Alaska Airlines AS2062，3 人同行，13:56 从旧金山出发，17:11 到达博兹曼。抵达 BZN 后领取黄石段 Toyota Sienna。",
     lodging: "Livingston / Yellowstone's Edge 方向 Airbnb，以最终预订为准。",
     lunch: "Bun Mee（SFO）。",
     schedule: {
-      morning: "从 36 Henderson Place Airbnb 退房，整理行李，归还 Toyota Sienna 并前往 SFO。",
+      morning: "从 The Ritz-Carlton, Half Moon Bay / 半月湾丽思卡尔顿酒店出发，整理行李，归还 Toyota Sienna 并前往 SFO。",
       afternoon: "在 SFO 午饭后乘坐 AS2062 飞往博兹曼，17:11 抵达 BZN 后取行李并领取黄石段 Toyota Sienna。",
       evening: "Bozeman / Belgrade 快速补给，优先买水、早餐和零食；晚饭 Copper，之后开往 Livingston / Yellowstone's Edge 方向 Airbnb 入住。"
     },
@@ -342,7 +342,7 @@ const journeyGroups = [
     id: "bay",
     title: "海湾序章",
     dateRange: "2026-06-11 至 2026-06-17",
-    summary: "旧金山湾区、恶魔岛、金门桥、Napa、斯坦福毕业典礼、Half Moon Bay、蒙特雷和 Livermore。",
+    summary: "旧金山湾区、恶魔岛、Napa、斯坦福毕业典礼、Half Moon Bay、蒙特雷和 Livermore。",
     dates: ["2026-06-11", "2026-06-12", "2026-06-13", "2026-06-14", "2026-06-15", "2026-06-16", "2026-06-17"]
   },
   {
