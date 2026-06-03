@@ -34,6 +34,23 @@ const itinerary = [
   {
     date: "2026-06-12",
     dayLabel: "第 2 天",
+    city: "Napa / Geyserville",
+    coverImage: "assets/napa-winery.png",
+    weatherLocation: weatherLocations.napa,
+    summary: "Napa 一日往返，重点安排 Opus One Winery，晚饭 Cyrus Dining Journey 17:30 已确认。",
+    transport: "Toyota Sienna 自驾从 3639 Haven Avenue 公寓往返 Napa / Geyserville；酒庄预约和当天司机安排需提前确认。",
+    lodging: "3639 Haven Avenue 公寓。",
+    lunch: "Bouchon Bistro（Yountville）。",
+    schedule: {
+      morning: "从 3639 Haven Avenue 公寓出发前往 Napa，预留路上时间和酒庄停车时间。",
+      afternoon: "参观 Opus One Winery；如有余力，在 Yountville 或 St. Helena 短暂停留。",
+      evening: "Cyrus Dining Journey 17:30，3 guests，Confirmation TOCK-R-6DNVS9QA；晚饭后返回公寓。"
+    },
+    notes: "Cyrus 预约已确认：2026-06-12 17:30，3 guests，Confirmation TOCK-R-6DNVS9QA。当天不要安排过多酒庄，开车人需避开饮酒；晚饭后回湾区路程较长，需预留体力和夜间驾驶时间。"
+  },
+  {
+    date: "2026-06-13",
+    dayLabel: "第 3 天",
     city: "旧金山",
     coverImage: "assets/sf-cloud-sea.png",
     weatherLocation: weatherLocations.sanFrancisco,
@@ -47,23 +64,6 @@ const itinerary = [
       evening: "晚饭安排韶山印象，之后返回 3639 Haven Avenue 公寓。"
     },
     notes: "恶魔岛预约时间为 10:35，需确认集合地点、停车和登船要求；晚饭前预留市区到餐厅的路程和停车时间。"
-  },
-  {
-    date: "2026-06-13",
-    dayLabel: "第 3 天",
-    city: "Napa / Geyserville",
-    coverImage: "assets/napa-winery.png",
-    weatherLocation: weatherLocations.napa,
-    summary: "Napa 一日往返，重点安排 Opus One Winery，晚饭去 Geyserville 的 Cyrus。",
-    transport: "Toyota Sienna 自驾从旧金山往返 Napa；酒庄预约和当天司机安排需提前确认。",
-    lodging: "3639 Haven Avenue 公寓。",
-    lunch: "Bouchon Bistro（Yountville）。",
-    schedule: {
-      morning: "从 3639 Haven Avenue 公寓出发前往 Napa，预留路上时间和酒庄停车时间。",
-      afternoon: "参观 Opus One Winery；如有余力，在 Yountville 或 St. Helena 短暂停留。",
-      evening: "Napa 段结束后前往 Geyserville，晚饭安排 Cyrus（Geyserville），之后返回公寓。"
-    },
-    notes: "Opus One Winery 需提前确认预约时间；Cyrus 预约时间更新后同步。当天不要安排过多酒庄，开车人需避开饮酒；晚饭后回旧金山路程较长，需预留体力和夜间驾驶时间。"
   },
   {
     date: "2026-06-14",
