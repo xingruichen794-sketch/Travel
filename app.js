@@ -367,6 +367,11 @@ const journeyGroups = [
     dates: ["2026-06-27", "2026-06-28", "2026-06-29"]
   }
 ];
+
+const journeyByDate = new Map(
+  journeyGroups.flatMap((group) => group.dates.map((date) => [date, group.id]))
+);
+
 const flightSegments = [
   {
     id: "mu589",
@@ -739,11 +744,16 @@ async function loadFlightStatuses() {
     }));
 }
 
+function getJourneyIdForDate(date) {
+  return journeyByDate.get(date) || "bay";
+}
+
 function createDayCard(item, index) {
   const parts = getDateParts(item.date);
   const detailsId = `day-details-${index + 1}`;
   const article = document.createElement("article");
   article.className = "day-card";
+  article.dataset.journey = getJourneyIdForDate(item.date);
 
   article.innerHTML = `
     <button class="day-card__toggle" type="button" aria-expanded="false" aria-controls="${detailsId}">

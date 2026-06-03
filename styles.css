@@ -688,14 +688,64 @@ main {
 }
 
 .day-card__details {
+  --detail-texture-a: rgba(145, 183, 193, 0.2);
+  --detail-texture-b: rgba(176, 199, 188, 0.18);
+  --detail-texture-c: rgba(239, 246, 244, 0.82);
+  --detail-thread: rgba(71, 98, 91, 0.07);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   border-top: 1px solid var(--line);
   background: #fbfcfb;
   padding: 18px;
 }
 
+.day-card__details::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 4%, var(--detail-texture-a), transparent 34%),
+    radial-gradient(circle at 86% 18%, var(--detail-texture-b), transparent 32%),
+    linear-gradient(135deg, transparent 0 48%, var(--detail-texture-c) 48% 50%, transparent 50% 100%),
+    repeating-linear-gradient(128deg, transparent 0 16px, var(--detail-thread) 16px 17px, transparent 17px 36px);
+}
+
+.day-card[data-journey="bay"] .day-card__details {
+  --detail-texture-a: rgba(139, 180, 192, 0.22);
+  --detail-texture-b: rgba(180, 204, 194, 0.2);
+  --detail-texture-c: rgba(233, 241, 239, 0.84);
+  --detail-thread: rgba(88, 127, 137, 0.07);
+}
+
+.day-card[data-journey="yellowstone"] .day-card__details {
+  --detail-texture-a: rgba(156, 181, 145, 0.21);
+  --detail-texture-b: rgba(205, 193, 168, 0.22);
+  --detail-texture-c: rgba(242, 239, 229, 0.86);
+  --detail-thread: rgba(102, 122, 82, 0.07);
+}
+
+.day-card[data-journey="vegas"] .day-card__details {
+  --detail-texture-a: rgba(224, 185, 117, 0.2);
+  --detail-texture-b: rgba(205, 151, 154, 0.17);
+  --detail-texture-c: rgba(247, 238, 229, 0.84);
+  --detail-thread: rgba(139, 103, 78, 0.07);
+}
+
+.day-card[data-journey="return"] .day-card__details {
+  --detail-texture-a: rgba(178, 193, 190, 0.2);
+  --detail-texture-b: rgba(204, 220, 211, 0.18);
+  --detail-texture-c: rgba(241, 246, 243, 0.86);
+  --detail-thread: rgba(103, 123, 116, 0.06);
+}
+
 .detail-grid {
   display: grid;
   gap: 14px;
+  position: relative;
+  z-index: 1;
 }
 
 .detail-item {
@@ -956,6 +1006,10 @@ body.theme-concierge {
 
 .theme-concierge .day-card__details {
   background: #151817;
+  --detail-texture-a: rgba(216, 183, 101, 0.08);
+  --detail-texture-b: rgba(120, 139, 129, 0.08);
+  --detail-texture-c: rgba(255, 255, 255, 0.03);
+  --detail-thread: rgba(216, 183, 101, 0.05);
 }
 
 .theme-concierge .day-card__weather {
