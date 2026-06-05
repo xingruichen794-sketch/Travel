@@ -105,13 +105,13 @@ const itinerary = [
     city: "蒙特雷",
     coverImage: "assets/monterey-whale-aquarium.png",
     weatherLocation: weatherLocations.monterey,
-    summary: "蒙特雷 09:00 四小时观鲸已预订，下午蒙特雷水族馆，晚饭回湾区吃 In-N-Out。",
+    summary: "蒙特雷 09:00 四小时观鲸已预订，观鲸后午饭并返湾区休息，晚饭回湾区吃 In-N-Out。",
     transport: "Toyota Sienna 自驾从旧金山往返蒙特雷；09:00 观鲸需很早出发，预留停车和登船时间。",
     lodging: "3639 Haven Avenue 公寓。",
     lunch: "Old Fisherman's Grotto（Monterey）。",
     schedule: {
       morning: "参加 Whale Watching Tour From Monterey，4-Hour Whale Watching Tour 09:00，3 Adults，Booking reference BR-1405224561。",
-      afternoon: "参观蒙特雷水族馆，控制节奏并预留回程时间。",
+      afternoon: "观鲸和午饭后返湾区休息，预留回程时间，不再追加景点。",
       evening: "晚饭安排 In-N-Out Burger（Daly City），之后返回公寓。"
     },
     notes: "观鲸预约人数为 3 Adults，Booking reference BR-1405224561。观鲸受天气和海况影响，出发前确认船班；准备防风外套和晕船药。"
@@ -119,15 +119,15 @@ const itinerary = [
   {
     date: "2026-06-17",
     dayLabel: "第 7 天",
-    city: "Livermore / Half Moon Bay",
-    coverImage: "assets/livermore-outlets.png",
-    weatherLocation: weatherLocations.livermore,
-    summary: "Livermore Outlets 购物，下午前往半月湾丽思卡尔顿，晚上 21:00 San Ho Won 已预约。",
-    transport: "Toyota Sienna 自驾前往 Livermore Outlets；下午从 3639 Haven Avenue 公寓整理离开并前往半月湾酒店；6/18 AS2062 13:56 从旧金山飞博兹曼。",
+    city: "旧金山 / Half Moon Bay",
+    coverImage: "assets/san-francisco.png",
+    weatherLocation: weatherLocations.halfMoonBay,
+    summary: "上午 10:00 女朋友 OPT 面谈，下午前往半月湾丽思卡尔顿，晚上 21:00 San Ho Won 已预约。",
+    transport: "Toyota Sienna 自驾；上午 10:00 女朋友 OPT 面谈，下午从 3639 Haven Avenue 公寓整理离开并前往半月湾酒店；6/18 AS2062 13:56 从旧金山飞博兹曼。",
     lodging: "The Ritz-Carlton, Half Moon Bay / 半月湾丽思卡尔顿酒店。",
-    lunch: "In-N-Out Burger（Livermore）。",
+    lunch: "In-N-Out Burger（按 OPT 面谈结束地点就近安排）。",
     schedule: {
-      morning: "前往 Livermore Outlets 购物，控制购物时间避免影响下午整理。",
+      morning: "10:00 女朋友 OPT 面谈；结束后按地点就近午饭，下午预留整理和转场时间。",
       afternoon: "从 3639 Haven Avenue 公寓整理离开，前往 The Ritz-Carlton, Half Moon Bay / 半月湾丽思卡尔顿酒店办理入住或寄存行李；确认黄石段 Toyota Sienna、住宿、路线和天气。",
       evening: "San Ho Won 21:00，Reservation #EP73R444PKC，3 人。晚饭后返回半月湾酒店。"
     },
@@ -224,15 +224,15 @@ const itinerary = [
     city: "博兹曼 / 拉斯维加斯",
     coverImage: "assets/bozeman-return-sienna.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "从黄石住宿退房，开 Toyota Sienna 回博兹曼补给并还车，晚上 WN1137 抵达拉斯维加斯并入住 Encore。",
+    summary: "从黄石住宿退房，开 Toyota Sienna 回博兹曼补给并还车，晚上 WN1137 抵达拉斯维加斯，入住 Encore 后 21:45 吃 Mott 32。",
     transport: "黄石段 Toyota Sienna 自驾至 BZN 并还车。Southwest Airlines WN1137，19:10 从博兹曼出发，20:20 到达拉斯维加斯。拉斯维加斯市内以打车为主。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
     schedule: {
       morning: "从 Yellowstone's Edge / Livingston 方向住宿退房，整理黄石段行李，检查证件、充电设备和车内物品。",
       afternoon: "开往 Bozeman，按时间安排午饭或补给；前往 BZN 还车并办理 WN1137 登机。",
-      evening: "20:20 抵达拉斯维加斯，打车前往 Encore at Wynn Las Vegas / 安可酒店办理入住；不安排正式晚饭，只在 Encore / Wynn 酒店和赌场轻松走一圈。"
+      evening: "20:20 抵达拉斯维加斯，打车前往 Encore at Wynn Las Vegas / 安可酒店办理入住；晚饭 Mott 32（The Palazzo / Venetian）21:45。"
     },
-    notes: "确认 WN1137 行李政策、BZN 还车时间、从 Livingston 到机场的路况缓冲、Encore 入住时间和 LAS 打车上车点；黄石转场后避免安排需要预约的正式晚饭。"
+    notes: "确认 WN1137 行李政策、BZN 还车时间、从 Livingston 到机场的路况缓冲、Encore 入住时间和 LAS 打车上车点；Mott 32 时间较晚，抵达后优先办理入住和简单整理。"
   },
   {
     date: "2026-06-24",
@@ -240,33 +240,33 @@ const itinerary = [
     city: "拉斯维加斯",
     coverImage: "assets/las-vegas-strip-show.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "中南 Strip 购物日：Crystals、Caesars / Forum Shops，晚饭 Peter Luger，晚上 O Show。",
-    transport: "市内打车为主。路线集中为 Encore → Cosmopolitan / Crystals → Caesars → Bellagio → Encore。",
+    summary: "拉斯维加斯轻松调整日，下午 14:00 Sphere，前后围绕 Encore / Strip 安排。",
+    transport: "市内打车为主。路线集中为 Encore → Strip / Sphere → Encore。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
     lunch: "Eggslut（The Cosmopolitan，早餐/早午饭；不强行预约，早去排队）。",
     schedule: {
-      morning: "从 Encore 打车到 The Cosmopolitan，早餐/早午饭安排 Eggslut；之后前往 The Shops at Crystals 购物。",
-      afternoon: "继续 Crystals 购物；下午转到 Caesars Palace / Forum Shops，顺路看 Caesars 区域并控制体力。",
-      evening: "晚饭安排 Peter Luger Steak House Las Vegas（Caesars Palace），建议预约 17:00-17:30；晚上看 O by Cirque du Soleil（Bellagio），建议买 21:00 场，饭后步行或打车到 Bellagio。"
+      morning: "从 Encore 出发，早餐/早午饭安排 Eggslut；之后可在 The Shops at Crystals 或 Wynn / Encore 轻量购物。",
+      afternoon: "Sphere 14:00；结束后按体力在 Venetian / Palazzo 或 Encore 周边休息。",
+      evening: "晚饭按当天体力在 Encore / Wynn 或 Strip 周边安排；不再固定 Peter Luger 晚餐。"
     },
-    notes: "Peter Luger 和 O Show 都需要提前预约/买票；如果 O Show 场次不是 21:00，晚饭时间需随之调整。夏季炎热，购物点之间尽量打车或走室内连通区域。"
+    notes: "Sphere 14:00 已加入当天安排；夏季炎热，购物点之间尽量打车或走室内连通区域。"
   },
   {
     date: "2026-06-25",
     dayLabel: "第 15 天",
     city: "拉斯维加斯",
-    coverImage: "assets/las-vegas-boulder-city.png",
+    coverImage: "assets/las-vegas.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "上午 Pro Gun Vegas，午饭按结束时间选 Ping Pang Pong 或 Weera Thai，晚上 Raku。",
-    transport: "打车或包车为主。路线集中为 Encore → Boulder City / Pro Gun Vegas → Gold Coast 或 Chinatown → Encore。",
+    summary: "中午 11:30 Peter Luger，下午休息或轻量购物，晚上保留灵活安排。",
+    transport: "市内打车为主。路线集中为 Encore → Caesars Palace / Peter Luger → Encore 或轻量购物点。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
-    lunch: "Ping Pang Pong（金海岸 Gold Coast）或 Weera Thai Chinatown / Sahara，按 Pro Gun Vegas 结束时间决定。",
+    lunch: "Peter Luger Steak House Las Vegas（Caesars Palace）11:30。",
     schedule: {
-      morning: "Pro Gun Vegas / Pro Gun Club，建议预约 9:00-10:00；从 Encore 出发，夏天早去更合理。",
-      afternoon: "午饭在 Ping Pang Pong 或 Weera Thai 之间选择；之后回 Encore 休息，避开最热时段。",
-      evening: "晚饭安排 Raku / Aburiya Raku（Chinatown / Spring Mountain），建议预约 18:00-18:30；Oyster Bar at Palace Station 只作为大家还有体力时的可选夜宵。"
+      morning: "上午从 Encore 出发，预留时间前往 Caesars Palace。",
+      afternoon: "Peter Luger 11:30 午饭后回 Encore 休息，或在 Caesars / Forum Shops 轻量购物。",
+      evening: "晚上保留灵活安排，可按体力选择 Wynn / Encore 周边晚饭或轻松逛酒店。"
     },
-    notes: "Pro Gun Vegas、Raku 需要提前预约；Pro Gun 往返时间较长，午饭不要排太紧。Oyster Bar 不是必须项，避免当天行程过满。"
+    notes: "Peter Luger 11:30 已加入当天安排；中午正餐较重，下午不安排高强度活动。"
   },
   {
     date: "2026-06-26",
@@ -274,16 +274,16 @@ const itinerary = [
     city: "拉斯维加斯",
     coverImage: "assets/las-vegas-north-strip-sphere.png",
     weatherLocation: weatherLocations.lasVegas,
-    summary: "北 Strip 轻松日：Wynn / Encore、Sphere / Palazzo、Mott 32 和 Awakening。",
-    transport: "市内打车为主。路线集中为 Encore / Wynn → Sphere / Venetian / Palazzo → Wynn。",
+    summary: "北 Strip 轻松日：Wynn / Encore，12:00 Samurai 午饭，晚上 21:00 Awakening。",
+    transport: "市内打车为主。路线集中为 Encore / Wynn → Samurai Japanese BBQ → Wynn。",
     lodging: "Encore at Wynn Las Vegas / 安可酒店。",
-    lunch: "The Buffet at Wynn，建议抢 10:30-11:00 priority seating。",
+    lunch: "Samurai Japanese BBQ 12:00。",
     schedule: {
-      morning: "早午饭安排 The Buffet at Wynn，建议 10:30-11:00；之后在 Wynn / Encore 购物和酒店内活动，少走路。",
-      afternoon: "Sphere show 暂排下午或傍晚；购票前确认当天节目。如果不是想看的内容，可改为只看 Sphere 外观或取消。",
-      evening: "晚饭安排 Mott 32（The Palazzo / Venetian），建议预约 17:30；晚上看 Awakening（Wynn），建议约 21:00，Mott 32 回 Wynn 很近。"
+      morning: "上午在 Wynn / Encore 酒店内轻松活动，少走路。",
+      afternoon: "Samurai Japanese BBQ 12:00 午饭；午饭后回 Encore 休息，下午可安排 Wynn / Encore 购物或酒店内活动。",
+      evening: "Awakening（Wynn）21:00；演出前晚饭按体力在 Wynn / Encore 周边轻松安排。"
     },
-    notes: "Wynn Buffet priority seating、Sphere、Mott 32、Awakening 都需要提前预约/买票；先定 show 时间，再围绕 show 时间定晚饭。确认 Encore 住宿覆盖至 6/27 早上退房。"
+    notes: "Samurai 12:00 和 Awakening 21:00 已加入当天安排；确认 Encore 住宿覆盖至 6/27 早上退房。"
   },
   {
     date: "2026-06-27",
@@ -397,12 +397,11 @@ const detailActionsByDate = {
       { type: "reservation", label: "预约信息", text: "Monterey 观鲸，6/16 09:00，4-Hour Whale Watching Tour，3 Adults，Booking reference BR-1405224561。" }
     ],
     lunch: [{ type: "map", label: "午饭导航", query: "Old Fisherman's Grotto Monterey" }],
-    afternoon: [{ type: "map", label: "水族馆导航", query: "Monterey Bay Aquarium" }],
     evening: [{ type: "map", label: "晚饭导航", query: "In-N-Out Burger Daly City" }]
   },
   "2026-06-17": {
-    morning: [{ type: "map", label: "Outlets导航", query: "San Francisco Premium Outlets Livermore" }],
-    lunch: [{ type: "map", label: "午饭导航", query: "In-N-Out Burger Livermore" }],
+    morning: [{ type: "copy", label: "复制事项", text: "6/17 10:00 女朋友 OPT 面谈" }],
+    lunch: [{ type: "map", label: "午饭导航", query: "In-N-Out Burger" }],
     afternoon: [
       { type: "map", label: "酒店导航", query: "The Ritz-Carlton Half Moon Bay" },
       { type: "copy", label: "复制酒店", text: "The Ritz-Carlton, Half Moon Bay / 半月湾丽思卡尔顿酒店" }
@@ -465,39 +464,47 @@ const detailActionsByDate = {
       { type: "map", label: "LAS导航", query: "Harry Reid International Airport" }
     ],
     afternoon: [{ type: "map", label: "BZN导航", query: "Bozeman Yellowstone International Airport" }],
-    evening: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
+    evening: [
+      { type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" },
+      { type: "map", label: "Mott 32导航", query: "Mott 32 Las Vegas" },
+      { type: "copy", label: "复制晚饭", text: "6/23 Mott 32 21:45" }
+    ],
     lodging: [{ type: "map", label: "酒店导航", query: "Encore at Wynn Las Vegas" }]
   },
   "2026-06-24": {
     lodging: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
     lunch: [{ type: "map", label: "Eggslut导航", query: "Eggslut Cosmopolitan Las Vegas" }],
-    morning: [{ type: "map", label: "Crystals导航", query: "The Shops at Crystals Las Vegas" }],
-    afternoon: [{ type: "map", label: "Caesars导航", query: "Forum Shops at Caesars Las Vegas" }],
-    evening: [
-      { type: "map", label: "Peter Luger导航", query: "Peter Luger Steak House Las Vegas" },
-      { type: "map", label: "O Show导航", query: "O by Cirque du Soleil Bellagio" }
-    ]
+    morning: [
+      { type: "map", label: "Crystals导航", query: "The Shops at Crystals Las Vegas" },
+      { type: "map", label: "Wynn导航", query: "Wynn Las Vegas" }
+    ],
+    afternoon: [
+      { type: "map", label: "Sphere导航", query: "Sphere Las Vegas" },
+      { type: "copy", label: "复制时间", text: "6/24 Sphere 14:00" }
+    ],
+    evening: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }]
   },
   "2026-06-25": {
     lodging: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
-    morning: [{ type: "map", label: "Pro Gun导航", query: "Pro Gun Vegas" }],
+    morning: [{ type: "map", label: "Caesars导航", query: "Caesars Palace Las Vegas" }],
     lunch: [
-      { type: "map", label: "Ping Pang Pong", query: "Ping Pang Pong Gold Coast Las Vegas" },
-      { type: "map", label: "Weera Thai", query: "Weera Thai Las Vegas Chinatown" }
+      { type: "map", label: "Peter Luger导航", query: "Peter Luger Steak House Las Vegas" },
+      { type: "copy", label: "复制午饭", text: "6/25 Peter Luger 11:30" }
     ],
-    evening: [
-      { type: "map", label: "Raku导航", query: "Aburiya Raku Las Vegas" },
-      { type: "map", label: "Oyster Bar", query: "Oyster Bar Palace Station Las Vegas" }
-    ]
+    afternoon: [{ type: "map", label: "Forum Shops", query: "Forum Shops at Caesars Las Vegas" }],
+    evening: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }]
   },
   "2026-06-26": {
     lodging: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
-    lunch: [{ type: "map", label: "Wynn Buffet", query: "The Buffet at Wynn Las Vegas" }],
+    lunch: [
+      { type: "map", label: "Samurai导航", query: "Samurai Japanese BBQ Las Vegas" },
+      { type: "copy", label: "复制午饭", text: "6/26 Samurai Japanese BBQ 12:00" }
+    ],
     morning: [{ type: "map", label: "Wynn导航", query: "Wynn Las Vegas" }],
-    afternoon: [{ type: "map", label: "Sphere导航", query: "Sphere Las Vegas" }],
+    afternoon: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
     evening: [
-      { type: "map", label: "Mott 32导航", query: "Mott 32 Las Vegas" },
-      { type: "map", label: "Awakening", query: "Awakening Wynn Las Vegas" }
+      { type: "map", label: "Awakening导航", query: "Awakening Wynn Las Vegas" },
+      { type: "copy", label: "复制演出", text: "6/26 Awakening 21:00" }
     ]
   },
   "2026-06-27": {
