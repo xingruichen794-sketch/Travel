@@ -335,6 +335,187 @@ const itinerary = [
   }
 ];
 
+const detailActionsByDate = {
+  "2026-06-11": {
+    transport: [
+      { type: "map", label: "SFO导航", query: "San Francisco International Airport" },
+      { type: "copy", label: "复制航班", text: "MU589，6/11 09:05 抵达 SFO" }
+    ],
+    lodging: [
+      { type: "map", label: "公寓导航", query: "3639 Haven Avenue" },
+      { type: "copy", label: "复制地址", text: "3639 Haven Avenue" }
+    ],
+    lunch: [{ type: "map", label: "餐厅导航", query: "The Kitchen Millbrae" }],
+    evening: [
+      { type: "map", label: "Sushi Ai导航", query: "Sushi Ai Redwood City" },
+      { type: "copy", label: "复制晚饭", text: "Sushi Ai（Redwood City）6/11 17:30，3 人" }
+    ]
+  },
+  "2026-06-12": {
+    lodging: [
+      { type: "map", label: "公寓导航", query: "3639 Haven Avenue" },
+      { type: "copy", label: "复制地址", text: "3639 Haven Avenue" }
+    ],
+    morning: [{ type: "map", label: "Opus One导航", query: "Opus One Winery Napa" }],
+    lunch: [{ type: "map", label: "午饭导航", query: "Bouchon Bistro Yountville" }],
+    afternoon: [{ type: "map", label: "酒庄导航", query: "Opus One Winery Napa" }],
+    evening: [
+      { type: "map", label: "Cyrus导航", query: "Cyrus Geyserville" },
+      { type: "reservation", label: "预约信息", text: "Cyrus Dining Journey，6/12 17:30，3 guests，Confirmation TOCK-R-6DNVS9QA。" }
+    ]
+  },
+  "2026-06-13": {
+    lodging: [
+      { type: "map", label: "公寓导航", query: "3639 Haven Avenue" },
+      { type: "copy", label: "复制地址", text: "3639 Haven Avenue" }
+    ],
+    morning: [
+      { type: "map", label: "码头导航", query: "Alcatraz Cruises Pier 33 San Francisco" },
+      { type: "copy", label: "复制预约", text: "Alcatraz 6/13 10:35，提前到 Pier 33 登船" }
+    ],
+    lunch: [{ type: "map", label: "午饭导航", query: "Dumpling Home San Francisco" }],
+    evening: [{ type: "map", label: "晚饭导航", query: "韶山印象 San Francisco Bay Area" }]
+  },
+  "2026-06-14": {
+    lodging: [{ type: "map", label: "公寓导航", query: "3639 Haven Avenue" }],
+    morning: [{ type: "map", label: "Stanford导航", query: "Stanford University" }],
+    lunch: [{ type: "map", label: "午饭导航", query: "Dumpling Hours Palo Alto" }],
+    afternoon: [{ type: "map", label: "购物导航", query: "Stanford Shopping Center" }],
+    evening: [{ type: "map", label: "晚饭导航", query: "Macarena Restaurant Palo Alto" }]
+  },
+  "2026-06-15": {
+    lodging: [{ type: "map", label: "公寓导航", query: "3639 Haven Avenue" }],
+    morning: [{ type: "map", label: "海边导航", query: "Half Moon Bay State Beach" }],
+    lunch: [{ type: "map", label: "午饭导航", query: "Sam's Chowder House Half Moon Bay" }],
+    afternoon: [{ type: "map", label: "骑马导航", query: "Half Moon Bay horseback riding" }],
+    evening: [{ type: "copy", label: "复制晚饭", text: "6/15 公寓家庭晚饭，唯一一顿自己做饭" }]
+  },
+  "2026-06-16": {
+    lodging: [{ type: "map", label: "公寓导航", query: "3639 Haven Avenue" }],
+    morning: [
+      { type: "map", label: "观鲸导航", query: "Monterey whale watching" },
+      { type: "reservation", label: "预约信息", text: "Monterey 观鲸，6/16 09:00，4-Hour Whale Watching Tour，3 Adults，Booking reference BR-1405224561。" }
+    ],
+    lunch: [{ type: "map", label: "午饭导航", query: "Old Fisherman's Grotto Monterey" }],
+    afternoon: [{ type: "map", label: "水族馆导航", query: "Monterey Bay Aquarium" }],
+    evening: [{ type: "map", label: "晚饭导航", query: "In-N-Out Burger Daly City" }]
+  },
+  "2026-06-17": {
+    morning: [{ type: "map", label: "Outlets导航", query: "San Francisco Premium Outlets Livermore" }],
+    lunch: [{ type: "map", label: "午饭导航", query: "In-N-Out Burger Livermore" }],
+    afternoon: [
+      { type: "map", label: "酒店导航", query: "The Ritz-Carlton Half Moon Bay" },
+      { type: "copy", label: "复制酒店", text: "The Ritz-Carlton, Half Moon Bay / 半月湾丽思卡尔顿酒店" }
+    ],
+    evening: [
+      { type: "map", label: "San Ho Won导航", query: "San Ho Won San Francisco" },
+      { type: "reservation", label: "预约信息", text: "San Ho Won，6/17 21:00，3 人，Reservation EP73R444PKC。" }
+    ]
+  },
+  "2026-06-18": {
+    transport: [
+      { type: "map", label: "SFO导航", query: "San Francisco International Airport" },
+      { type: "map", label: "BZN导航", query: "Bozeman Yellowstone International Airport" }
+    ],
+    morning: [
+      { type: "map", label: "酒店导航", query: "The Ritz-Carlton Half Moon Bay" },
+      { type: "map", label: "SFO导航", query: "San Francisco International Airport" }
+    ],
+    lunch: [{ type: "map", label: "午饭导航", query: "Bun Mee SFO" }],
+    evening: [
+      { type: "map", label: "Copper导航", query: "Copper Bozeman Montana" },
+      { type: "map", label: "补给导航", query: "Walmart Supercenter Bozeman" }
+    ]
+  },
+  "2026-06-19": {
+    morning: [{ type: "map", label: "北门导航", query: "Roosevelt Arch Gardiner Montana" }],
+    afternoon: [
+      { type: "map", label: "Mammoth导航", query: "Mammoth Hot Springs Yellowstone" },
+      { type: "map", label: "Tower Fall导航", query: "Tower Fall Yellowstone" }
+    ],
+    evening: [{ type: "map", label: "晚饭导航", query: "Yellowstone Valley Grill Livingston Montana" }]
+  },
+  "2026-06-20": {
+    morning: [{ type: "map", label: "Norris导航", query: "Norris Geyser Basin Yellowstone" }],
+    afternoon: [
+      { type: "map", label: "Grand Prismatic导航", query: "Grand Prismatic Spring Overlook" },
+      { type: "map", label: "Midway导航", query: "Midway Geyser Basin Yellowstone" }
+    ],
+    evening: [{ type: "map", label: "住宿方向", query: "West Yellowstone Montana" }]
+  },
+  "2026-06-21": {
+    morning: [{ type: "map", label: "Old Faithful导航", query: "Old Faithful Yellowstone" }],
+    afternoon: [
+      { type: "map", label: "West Thumb导航", query: "West Thumb Geyser Basin" },
+      { type: "map", label: "黄石湖导航", query: "Yellowstone Lake" }
+    ],
+    evening: [{ type: "map", label: "Hayden导航", query: "Hayden Valley Yellowstone" }]
+  },
+  "2026-06-22": {
+    morning: [{ type: "map", label: "Canyon导航", query: "Canyon Village Yellowstone" }],
+    afternoon: [
+      { type: "map", label: "Artist Point导航", query: "Artist Point Yellowstone" },
+      { type: "map", label: "Lookout Point导航", query: "Lookout Point Yellowstone" }
+    ],
+    evening: [{ type: "map", label: "Livingston方向", query: "Livingston Montana" }]
+  },
+  "2026-06-23": {
+    transport: [
+      { type: "map", label: "BZN导航", query: "Bozeman Yellowstone International Airport" },
+      { type: "map", label: "LAS导航", query: "Harry Reid International Airport" }
+    ],
+    afternoon: [{ type: "map", label: "BZN导航", query: "Bozeman Yellowstone International Airport" }],
+    evening: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
+    lodging: [{ type: "map", label: "酒店导航", query: "Encore at Wynn Las Vegas" }]
+  },
+  "2026-06-24": {
+    lodging: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
+    lunch: [{ type: "map", label: "Eggslut导航", query: "Eggslut Cosmopolitan Las Vegas" }],
+    morning: [{ type: "map", label: "Crystals导航", query: "The Shops at Crystals Las Vegas" }],
+    afternoon: [{ type: "map", label: "Caesars导航", query: "Forum Shops at Caesars Las Vegas" }],
+    evening: [
+      { type: "map", label: "Peter Luger导航", query: "Peter Luger Steak House Las Vegas" },
+      { type: "map", label: "O Show导航", query: "O by Cirque du Soleil Bellagio" }
+    ]
+  },
+  "2026-06-25": {
+    lodging: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
+    morning: [{ type: "map", label: "Pro Gun导航", query: "Pro Gun Vegas" }],
+    lunch: [
+      { type: "map", label: "Ping Pang Pong", query: "Ping Pang Pong Gold Coast Las Vegas" },
+      { type: "map", label: "Weera Thai", query: "Weera Thai Las Vegas Chinatown" }
+    ],
+    evening: [
+      { type: "map", label: "Raku导航", query: "Aburiya Raku Las Vegas" },
+      { type: "map", label: "Oyster Bar", query: "Oyster Bar Palace Station Las Vegas" }
+    ]
+  },
+  "2026-06-26": {
+    lodging: [{ type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" }],
+    lunch: [{ type: "map", label: "Wynn Buffet", query: "The Buffet at Wynn Las Vegas" }],
+    morning: [{ type: "map", label: "Wynn导航", query: "Wynn Las Vegas" }],
+    afternoon: [{ type: "map", label: "Sphere导航", query: "Sphere Las Vegas" }],
+    evening: [
+      { type: "map", label: "Mott 32导航", query: "Mott 32 Las Vegas" },
+      { type: "map", label: "Awakening", query: "Awakening Wynn Las Vegas" }
+    ]
+  },
+  "2026-06-27": {
+    transport: [
+      { type: "map", label: "LAS导航", query: "Harry Reid International Airport" },
+      { type: "map", label: "SFO导航", query: "San Francisco International Airport" }
+    ],
+    morning: [
+      { type: "map", label: "Encore导航", query: "Encore at Wynn Las Vegas" },
+      { type: "map", label: "LAS导航", query: "Harry Reid International Airport" }
+    ]
+  },
+  "2026-06-29": {
+    transport: [{ type: "map", label: "SFO导航", query: "San Francisco International Airport" }],
+    morning: [{ type: "map", label: "SFO导航", query: "San Francisco International Airport" }]
+  }
+};
+
 const weekdayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const weekdayZh = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
 const journeyGroups = [
@@ -590,26 +771,91 @@ async function loadWeatherForecasts() {
   }));
 }
 
-function renderSchedule(schedule) {
-  return `
-    <ul>
-      <li><strong>上午：</strong>${schedule.morning}</li>
-      <li><strong>下午：</strong>${schedule.afternoon}</li>
-      <li><strong>晚上：</strong>${schedule.evening}</li>
-    </ul>
-  `;
+const detailActionStore = new Map();
+let detailActionSequence = 0;
+
+function getTimelineItems(item) {
+  return [
+    { key: "transport", title: "交通", body: item.transport },
+    { key: "lodging", title: "住宿", body: item.lodging },
+    { key: "morning", title: "上午", body: item.schedule?.morning },
+    { key: "lunch", title: "午饭", body: item.lunch },
+    { key: "afternoon", title: "下午", body: item.schedule?.afternoon },
+    { key: "evening", title: "晚上", body: item.schedule?.evening },
+    { key: "notes", title: "备注", body: item.notes }
+  ].filter((entry) => entry.body);
 }
 
-function renderLunch(lunch) {
-  if (!lunch) {
+function getDetailActions(item, key) {
+  return detailActionsByDate[item.date]?.[key] || [];
+}
+
+function getMapsUrl(action) {
+  const query = action.query || action.text || action.label;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+function registerDetailAction(action) {
+  const id = `detail-action-${++detailActionSequence}`;
+  detailActionStore.set(id, action);
+  return id;
+}
+
+function getActionLabel(action) {
+  if (action.label) {
+    return action.label;
+  }
+
+  if (action.type === "copy") {
+    return "复制";
+  }
+
+  if (action.type === "reservation") {
+    return "预约信息";
+  }
+
+  return "导航";
+}
+
+function renderDetailAction(action) {
+  const label = getActionLabel(action);
+
+  if (action.type === "map") {
+    return `<a class="detail-action detail-action--map" href="${getMapsUrl(action)}" target="_blank" rel="noopener">${label}</a>`;
+  }
+
+  const id = registerDetailAction(action);
+  const expanded = action.type === "reservation" ? ' aria-expanded="false"' : "";
+  return `<button class="detail-action detail-action--${action.type}" type="button" data-detail-action-id="${id}"${expanded}>${label}</button>`;
+}
+
+function renderDetailActions(actions) {
+  if (!actions.length) {
     return "";
   }
 
+  return `<div class="timeline-actions">${actions.map(renderDetailAction).join("")}</div>`;
+}
+
+function renderTimelineItem(item, entry) {
+  const actions = getDetailActions(item, entry.key);
+
   return `
-        <section class="detail-item">
-          <h4>午饭</h4>
-          <p>${lunch}</p>
-        </section>
+        <li class="timeline-item" data-timeline-key="${entry.key}">
+          <div class="timeline-item__content">
+            <h4>${entry.title}</h4>
+            <p>${entry.body}</p>
+            ${renderDetailActions(actions)}
+          </div>
+        </li>
+  `;
+}
+
+function renderDetailTimeline(item) {
+  return `
+      <ol class="detail-timeline">
+        ${getTimelineItems(item).map((entry) => renderTimelineItem(item, entry)).join("")}
+      </ol>
   `;
 }
 
@@ -744,6 +990,103 @@ async function loadFlightStatuses() {
     }));
 }
 
+async function copyTextToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch (error) {
+      // Fall through to the textarea fallback for browsers that block clipboard access.
+    }
+  }
+
+  const textarea = document.createElement("textarea");
+  textarea.value = text;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.opacity = "0";
+  textarea.style.pointerEvents = "none";
+  document.body.appendChild(textarea);
+  textarea.select();
+
+  let copied = false;
+
+  try {
+    copied = document.execCommand("copy");
+  } catch (error) {
+    copied = false;
+  } finally {
+    textarea.remove();
+  }
+
+  return copied;
+}
+
+function setActionFeedback(button, text) {
+  const originalLabel = button.dataset.originalLabel || button.textContent;
+  button.dataset.originalLabel = originalLabel;
+  button.textContent = text;
+
+  window.setTimeout(() => {
+    button.textContent = originalLabel;
+  }, 1600);
+}
+
+function toggleReservationDetails(button, action) {
+  const timelineItem = button.closest(".timeline-item");
+
+  if (!timelineItem) {
+    return;
+  }
+
+  let note = timelineItem.querySelector(".reservation-note");
+
+  if (!note) {
+    note = document.createElement("p");
+    note.className = "reservation-note";
+    note.hidden = true;
+    timelineItem.querySelector(".timeline-actions")?.after(note);
+  }
+
+  const shouldShow = note.hidden;
+  note.textContent = action.text;
+  note.hidden = !shouldShow;
+  button.textContent = shouldShow ? "收起信息" : (button.dataset.originalLabel || getActionLabel(action));
+  button.setAttribute("aria-expanded", String(shouldShow));
+  button.dataset.originalLabel = getActionLabel(action);
+}
+
+async function handleDetailActionClick(event) {
+  const button = event.currentTarget;
+  const action = detailActionStore.get(button.dataset.detailActionId);
+
+  if (!action) {
+    return;
+  }
+
+  if (action.type === "copy") {
+    const copied = await copyTextToClipboard(action.text);
+
+    if (copied) {
+      setActionFeedback(button, "已复制");
+    } else {
+      window.prompt("复制这段内容", action.text);
+      setActionFeedback(button, "可手动复制");
+    }
+  }
+
+  if (action.type === "reservation") {
+    toggleReservationDetails(button, action);
+  }
+}
+
+function bindDetailActions(scope) {
+  scope.querySelectorAll("[data-detail-action-id]").forEach((button) => {
+    button.dataset.originalLabel = button.textContent;
+    button.addEventListener("click", handleDetailActionClick);
+  });
+}
+
 function getJourneyIdForDate(date) {
   return journeyByDate.get(date) || "bay";
 }
@@ -773,25 +1116,7 @@ function createDayCard(item, index) {
       </span>
     </button>
     <div class="day-card__details" id="${detailsId}" hidden>
-      <div class="detail-grid">
-        <section class="detail-item">
-          <h4>交通</h4>
-          <p>${item.transport}</p>
-        </section>
-        <section class="detail-item">
-          <h4>住宿</h4>
-          <p>${item.lodging}</p>
-        </section>
-        ${renderLunch(item.lunch)}
-        <section class="detail-item">
-          <h4>当天安排</h4>
-          ${renderSchedule(item.schedule)}
-        </section>
-        <section class="detail-item">
-          <h4>备注</h4>
-          <p>${item.notes}</p>
-        </section>
-      </div>
+      ${renderDetailTimeline(item)}
     </div>
   `;
 
@@ -805,6 +1130,8 @@ function createDayCard(item, index) {
     details.hidden = isOpen;
     action.textContent = isOpen ? "查看详情" : "收起详情";
   });
+
+  bindDetailActions(article);
 
   return article;
 }
